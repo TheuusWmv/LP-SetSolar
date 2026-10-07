@@ -25,7 +25,7 @@ export const OptionCard: React.FC<OptionCardProps> = ({
     className={`w-full min-h-[54px] sm:min-h-[58px] py-3 px-4 sm:py-3.5 sm:px-4.5 rounded-2xl border-2 transition-all duration-150 flex items-center justify-between text-left cursor-pointer group select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-accent)] ${
       selected
         ? 'bg-[var(--brand-accent-soft)] border-[var(--brand-accent)] shadow-xs'
-        : 'bg-white border-slate-200/90 hover:border-red-300 hover:bg-red-50/30 shadow-2xs'
+        : 'bg-white border-slate-200/90 hover:border-[var(--brand-accent)]/50 hover:bg-[var(--brand-accent-soft)]/50 shadow-2xs'
     }`}
   >
     {/* Keycap Badge on the Left (A, B, C, D...) */}

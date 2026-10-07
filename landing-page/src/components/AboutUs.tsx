@@ -170,7 +170,7 @@ export const AboutUs: React.FC = () => {
             </BlurReveal>
 
             {/* Card 4: Dark Navy Authority Card */}
-            <BlurReveal yOffset={16} blur="6px" className="min-h-[176px] min-w-0 rounded-[1.75rem] bg-[#0B1827] text-white p-4 flex flex-col justify-between border border-neutral-800 shadow-md">
+            <BlurReveal yOffset={16} blur="6px" className="min-h-[176px] min-w-0 rounded-[1.75rem] bg-gradient-to-br from-[#1B3A5C] to-[#0D1E30] border border-amber-500/30 text-white shadow-sm p-4 flex flex-col justify-between">
               <div className="flex items-center justify-between mb-2">
                 <MapPin className="w-4 h-4 text-[var(--brand-accent)]" />
                 <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" />
@@ -268,7 +268,7 @@ export const AboutUs: React.FC = () => {
           {/* Bento Item 3: Sede Própria em Trindade (Col 1-4) */}
           <BlurRevealItem
             yOffset={28}
-            className="lg:col-span-4 rounded-[2rem] bg-[#0B1827] text-white p-7 sm:p-8 flex flex-col justify-between shadow-xl border border-neutral-800 group"
+            className="lg:col-span-4 rounded-[2rem] bg-gradient-to-br from-[#1B3A5C] to-[#0D1E30] border border-amber-500/30 text-white shadow-lg shadow-sky-950/20 p-7 sm:p-8 flex flex-col justify-between group"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -327,7 +327,7 @@ export const AboutUs: React.FC = () => {
           {/* Bento Item 5: Garantia de 25 Anos e Qualidade Técnica (Col 9-12) */}
           <BlurRevealItem
             yOffset={28}
-            className="lg:col-span-4 rounded-[2rem] bg-[#1B3A5C] text-white p-7 sm:p-8 flex flex-col justify-between shadow-lg border border-sky-800/60"
+            className="lg:col-span-4 rounded-[2rem] bg-gradient-to-br from-[#1B3A5C] to-[#0D1E30] border border-amber-500/30 text-white shadow-lg shadow-sky-950/20 p-7 sm:p-8 flex flex-col justify-between"
           >
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-widest text-amber-300">

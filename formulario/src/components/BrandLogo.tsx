@@ -1,14 +1,15 @@
+import logoImg from '../assets/logo-setsolar.png';
 import { SunMedium } from 'lucide-react';
 import { brandConfig } from '../config/formConfig';
 
 export function BrandLogo({ large = false }: { large?: boolean }) {
   return (
     <span className="flex items-center min-w-0 select-none">
-      {brandConfig.logoUrl ? (
+      {logoImg ? (
         <img
-          src={brandConfig.logoUrl}
+          src={logoImg}
           alt={brandConfig.companyName}
-          className={`${large ? 'h-10 max-w-[200px]' : 'h-7 sm:h-8 max-w-[170px]'} w-auto object-contain`}
+          className={`${large ? 'h-10 max-w-[200px]' : 'h-8 sm:h-9 max-w-[180px]'} w-auto object-contain`}
         />
       ) : (
         <span className="flex items-center gap-2">

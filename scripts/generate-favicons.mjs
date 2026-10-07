@@ -12,9 +12,10 @@ const sharp = require(path.join(rootDir, 'landing-page/node_modules/sharp'));
 
 // Resolve Set Solar source logo
 const candidatePaths = [
+  path.join(rootDir, 'downloaded-assets/logo_set_solar_light.png'),
+  path.join(rootDir, 'landing-page/public/logo-setsolar.png'),
   path.join(rootDir, 'downloaded-assets/lovable_logo_transparent.png'),
   path.join(rootDir, 'downloaded-assets/logo_set_solar.png'),
-  path.join(rootDir, 'landing-page/public/logo-setsolar.png'),
 ];
 
 let sourceLogoPath = candidatePaths.find(p => fs.existsSync(p));

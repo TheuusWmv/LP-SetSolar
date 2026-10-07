@@ -138,5 +138,75 @@
         "unit": "unitless"
       }
     }
+  },
+  {
+    "stage": "publicado ap?s deploy",
+    "device": "mobile",
+    "url": "https://setsolar.grupokami.com/",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-07T16:27:56.589Z",
+    "scores": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 1940.494,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 2125.006,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 2877.2723390455494,
+        "unit": "millisecond"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      }
+    }
+  },
+  {
+    "stage": "publicado ap?s deploy",
+    "device": "desktop",
+    "url": "https://setsolar.grupokami.com/",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-07T16:28:17.536Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 537.0545,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 537.5545,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 641.8988950821599,
+        "unit": "millisecond"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      }
+    }
   }
 ]

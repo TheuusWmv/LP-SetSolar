@@ -6,7 +6,6 @@ import { HowItWorks } from "./components/HowItWorks";
 import { Services } from "./components/Services";
 import { Testimonials } from "./components/Testimonials";
 import { FAQ } from "./components/FAQ";
-import { SolarGuide } from "./components/SolarGuide";
 import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 
@@ -48,7 +47,6 @@ export const App: React.FC = () => {
 
         {/* Perguntas Frequentes (FAQ) */}
         <FAQ />
-        <SolarGuide />
 
         {/* 8. CTA (High Impact Simulation Banner) */}
         <CTA />

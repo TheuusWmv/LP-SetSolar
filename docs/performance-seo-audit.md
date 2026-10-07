@@ -10,8 +10,10 @@ Data: 2026-10-07. P?gina: https://setsolar.grupokami.com/
 | publicado antes | desktop | 93 | 95 | 100 | 66 |
 | build local otimizado | mobile | 99 | 100 | 100 | 100 |
 | build local otimizado | desktop | 100 | 100 | 100 | 100 |
+| publicado ap?s deploy | mobile | 97 | 100 | 100 | 100 |
+| publicado ap?s deploy | desktop | 100 | 100 | 100 | 100 |
 
-Medi??es Lighthouse CLI com Chrome, categorias padr?o e throttling simulado. Desktop usa preset desktop; mobile usa configura??o padr?o. O build local foi servido com gzip. Vers?o, hor?rio e m?tricas est?o em [lighthouse-summary.json](lighthouse-summary.json). As medi??es anteriores usaram os dom?nios p?blicos; comparar com localhost n?o isola efeitos da rede/CDN. O resultado local n?o comprova a nota no PageSpeed p?blico.
+Medi??es Lighthouse CLI com Chrome, categorias padr?o e throttling simulado. Desktop usa preset desktop; mobile usa configura??o padr?o. O build local foi servido com gzip. Vers?o, hor?rio e m?tricas est?o em [lighthouse-summary.json](lighthouse-summary.json). As medi??es anteriores usaram os dom?nios p?blicos; comparar com localhost n?o isola efeitos da rede/CDN. O resultado local n?o comprova a nota no PageSpeed p?blico. Os resultados ap?s deploy foram medidos no dom?nio p?blico com Lighthouse CLI e confirmam 97/100/100/100 no mobile e 100/100/100/100 no desktop. A meta de desempenho mobile 100 n?o foi atingida nesta auditoria.
 
 O endpoint do PageSpeed Insights retornou HTTP 429 durante as tentativas. N?o foi poss?vel obter relat?rio do servi?o em pagespeed.web.dev. Pontua??es variam conforme ambiente, rede e execu??o; desempenho mobile de 99 n?o equivale a 100.
 
@@ -34,3 +36,7 @@ Build completo e cinco testes automatizados por projeto passaram. Chrome em 360,
 As melhorias tornam conte?do e entidade mais acess?veis a buscadores e sistemas de respostas de IA. N?o garantem posi??o nem cita??o. Indexa??o, reputa??o, conte?do ?til e sinais externos continuam relevantes. O cadastro empresarial deve refletir dados reais e consistentes; monitorar indexa??o no Search Console ap?s o deploy. N?o foram inventadas avalia??es agregadas.
 
 Refer?ncias: [recursos de IA na Pesquisa Google](https://developers.google.com/search/docs/appearance/ai-features), [pontua??o de desempenho Lighthouse](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring).
+
+## Publica??o confirmada
+
+Push realizado na branch main de ambos os reposit?rios. Confirmados no dom?nio p?blico: HTML novo, robots index?vel, canonical e assets atualizados. O PageSpeed foi tentado novamente ap?s o deploy e continuou retornando HTTP 429.

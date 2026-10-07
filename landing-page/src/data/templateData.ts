@@ -387,5 +387,25 @@ export const templateData = {
         "A manutenção é mínima. Como os módulos possuem tecnologia antiaderente, a própria água da chuva realiza uma limpeza básica. Recomendamos apenas uma limpeza especializada a cada 6 a 12 meses para retirar poeira acumulada, serviço que a Set Solar também oferece para garantir que sua geração opere sempre no máximo rendimento.",
       category: "Manutenção",
     },
+    {
+      question: "Como escolher o projeto solar ideal para meu imóvel ou empresa?",
+      answer:
+        "Para definir o projeto ideal em Trindade, Goiânia e região, nossa engenharia avalia seu consumo mensal em kWh (através de uma conta de energia), a área disponível no telhado ou solo e se você precisa de autonomia com baterias para falhas da rede. A proposta técnica detalha os equipamentos Tier 1, a geração estimada de kWh mês a mês e o retorno sobre o investimento de forma personalizada.",
+      category: "Projetos",
+    },
+    {
+      question:
+        "Qual a diferença entre sistema solar conectado à rede (On-Grid) e com baterias e backup?",
+      answer:
+        "O sistema conectado à rede (On-Grid) tem como objetivo principal gerar energia para abater até 95% da conta de luz faturada pela Equatorial Goiás, injetando o excedente como créditos. Já o sistema com baterias (Híbrido ou Backup) mantém equipamentos essenciais ligados mesmo durante apagões e quedas de energia da distribuidora. Em cada estudo, avaliamos qual solução atende melhor sua rotina e orçamento.",
+      category: "Técnico",
+    },
+    {
+      question:
+        "O que define o valor do investimento e como checar a conformidade dos equipamentos?",
+      answer:
+        "O valor do investimento depende do volume de consumo, da tecnologia dos inversores e da complexidade estrutural de fixação. A Set Solar utiliza exclusivamente equipamentos fotovoltaicos registrados e homologados no Inmetro e em total conformidade com as normas da ANEEL e da Equatorial Goiás, garantindo segurança técnica, projeto elétrico com ART assinada e garantias de fábrica de até 25 anos.",
+      category: "Investimento",
+    },
   ] as FAQItem[],
 };

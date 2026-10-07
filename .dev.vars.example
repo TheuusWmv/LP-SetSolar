@@ -1,0 +1,4 @@
+# Copie para .dev.vars ao usar `wrangler pages dev dist` localmente.
+# Nunca coloque este arquivo no Git ou use prefixo VITE_ nestas variáveis.
+LEAD_WEBHOOK_URL=https://exemplo.com/webhook
+LEAD_WEBHOOK_TOKEN=

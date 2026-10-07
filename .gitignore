@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.prerender/
+.wrangler/
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+*.local
+artifacts/
+coverage/
+image.png

@@ -1,0 +1,193 @@
+@import "./theme.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:focus-visible {
+  outline: 3px solid var(--brand-accent, #E9191B);
+  outline-offset: 4px;
+}
+
+.services-track { scrollbar-width: none; }
+.services-track::-webkit-scrollbar { display: none; }
+/* Leave enough trailing space for the final card to snap to the same origin. */
+.services-track::after { content: ""; flex: 0 0 calc(14% - 12px); }
+
+@media (max-width: 767px) {
+  /* Intrinsic content height protects the hero on short screens and with large text.
+     The extra scroll distance still lets the sticky frame complete its animation. */
+  .solar-hero { height: calc(var(--hero-height, 100dvh) + 35vh); }
+  .solar-hero-viewport { height: var(--hero-height, 100dvh); overflow: visible; }
+  .solar-hero-frame, .solar-hero-canvas { height: 100%; min-height: 0; }
+  .solar-hero-canvas > .relative.z-10 { min-height: 0; padding-top: 112px; padding-bottom: 32px; }
+  .hero-notch { width: min(84%, 360px, calc(100% - 64px)); }
+  .solar-hero-canvas a { min-height: 44px; }
+  .solar-hero-canvas .pointer-events-auto > .bg-white { padding-inline: 12px; }
+  .solar-hero-canvas a[aria-label="Sollux Solar - Início"] { gap: 8px; }
+  .solar-hero-canvas a[aria-label="Sollux Solar - Início"] > div { width: 24px; height: 24px; flex-shrink: 0; }
+  .solar-hero-canvas button[aria-controls="hero-mobile-menu"] { min-width: 44px; min-height: 44px; width: 44px; height: 44px; flex-shrink: 0; }
+  .solar-hero-canvas button[aria-controls="hero-mobile-menu"] svg { width: 20px; height: 20px; }
+  .mobile-bento > * { min-width: 0; }
+  .mobile-footer a, .mobile-footer summary { min-height: 44px; padding-block: 12px; }
+  .mobile-footer a { display: flex; align-items: center; font-size: 14px; overflow-wrap: anywhere; }
+  .footer-legal a, .footer-legal button { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+/* Pre-rendered content remains readable when JavaScript is unavailable. */
+html:not(.js-ready) #root [style*="opacity"] {
+  opacity: 1 !important;
+}
+html:not(.js-ready) #root [style*="filter"] {
+  filter: none !important;
+}
+
+.faq-summary::-webkit-details-marker { display: none; }
+.faq-summary { list-style: none; }
+.faq-item[open] .faq-toggle { transform: rotate(45deg); }
+.faq-item[open] .faq-icon {
+  background-color: var(--brand-accent, #E9191B);
+  border-color: var(--brand-accent, #E9191B);
+  color: #ffffff;
+}
+.faq-item[open] .faq-summary:hover .faq-icon {
+  background-color: var(--brand-accent-hover, #872325);
+  border-color: var(--brand-accent-hover, #872325);
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+    --duration-press: 160ms;
+    --duration-popover: 200ms;
+    --duration-ui: 250ms;
+    --duration-card: 280ms;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #171717;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--brand-accent, #E9191B);
+    color: #ffffff;
+  }
+}
+
+/* Subtle custom utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card-dark {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+  }
+
+  .diffusion-shadow {
+    box-shadow: 0 24px 48px -18px rgba(15, 23, 42, 0.06);
+  }
+
+  .diffusion-shadow-lg {
+    box-shadow: 0 32px 64px -20px rgba(15, 23, 42, 0.1);
+  }
+}
+
+/* Animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(0.96); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  animation: marquee 42s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 46s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee:focus-within,
+.animate-marquee-reverse:hover,
+.animate-marquee-reverse:focus-within {
+  animation-play-state: paused;
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation: none !important;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+

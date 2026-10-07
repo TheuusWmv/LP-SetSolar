@@ -1,0 +1,36 @@
+{
+  "name": "solar-landing-page",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/optimize-images.mjs && tsc && vite build && vite build --ssr src/entry-server.tsx --outDir .prerender && node scripts/prerender.mjs",
+    "test:seo": "playwright test",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.20",
+    "clsx": "^2.1.1",
+    "framer-motion": "^13.4.0",
+    "lucide-react": "^1.16.0",
+    "motion": "^13.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-use-measure": "^2.1.7",
+    "shaders": "^3.2.473",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}

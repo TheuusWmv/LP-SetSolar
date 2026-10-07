@@ -126,6 +126,22 @@ html:not(.js-ready) [data-island] [style*="filter"] {
   border-color: var(--brand-accent-hover, #b47218);
 }
 
+@keyframes faq-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+.faq-item[open] .faq-answer {
+  animation: faq-reveal 0.28s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
 @layer base {
   :root {
     --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;

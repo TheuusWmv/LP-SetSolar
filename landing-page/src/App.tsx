@@ -21,7 +21,9 @@ export const App: React.FC = () => {
 
       <main>
         {/* 1. Hero Section (Framed with Notch Navbar) */}
-        <SolarFramedHero />
+        <div data-island="Hero">
+          <SolarFramedHero />
+        </div>
 
         {/* 2. Marquee das Marcas (Tier-1 Solar Brands) */}
         <SolarLogoMarquee />
@@ -46,10 +48,14 @@ export const App: React.FC = () => {
         </div>
 
         {/* Perguntas Frequentes (FAQ) */}
-        <FAQ />
+        <div data-island="FAQ">
+          <FAQ />
+        </div>
 
         {/* 8. CTA (High Impact Simulation Banner) */}
-        <CTA />
+        <div data-island="CTA">
+          <CTA />
+        </div>
       </main>
 
       {/* 9. Footer (Institutional Multi-Column Navigation) */}

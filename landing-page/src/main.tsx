@@ -74,11 +74,15 @@ document.documentElement.classList.add("js-ready");
 queueHero();
 
 const loaders = {
+  Hero: () =>
+    import("./components/SolarFramedHero").then((m) => m.SolarFramedHero),
   AboutUs: () => import("./components/AboutUs").then((m) => m.AboutUs),
   HowItWorks: () => import("./components/HowItWorks").then((m) => m.HowItWorks),
   Services: () => import("./components/Services").then((m) => m.Services),
   Testimonials: () =>
     import("./components/Testimonials").then((m) => m.Testimonials),
+  FAQ: () => import("./components/FAQ").then((m) => m.FAQ),
+  CTA: () => import("./components/CTA").then((m) => m.CTA),
   Footer: () => import("./components/Footer").then((m) => m.Footer),
 };
 const observer = new IntersectionObserver(
@@ -102,7 +106,7 @@ const observer = new IntersectionObserver(
         );
     }
   },
-  { rootMargin: "300px" },
+  { rootMargin: "600px" },
 );
 for (const region of document.querySelectorAll<HTMLElement>("[data-island]"))
   observer.observe(region);

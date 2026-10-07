@@ -102,7 +102,7 @@ export const FAQ: React.FC = () => {
                           </div>
                         </summary>
 
-                        <div className="pb-5 pt-0 text-slate-600 max-w-xl">
+                        <div className="faq-answer pb-5 pt-0 text-slate-600 max-w-xl">
                           <BlurReveal as="p" yOffset={12} blur="6px" margin="0px" className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                             {faq.answer}
                           </BlurReveal>

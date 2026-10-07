@@ -2,7 +2,7 @@ import { OptimizedImage } from "./OptimizedImage";
 import React from "react";
 import { ArrowUpRight, CheckCircle2, ShieldCheck, Menu, X } from "lucide-react";
 import { templateData } from "../data/templateData";
-import { BlurReveal } from "./ui/static-reveal";
+import { BlurReveal } from "./ui/blur-reveal";
 
 export const SolarFramedHero: React.FC = () => {
   const { company } = templateData;

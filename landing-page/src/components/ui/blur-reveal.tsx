@@ -64,7 +64,12 @@ export const BlurReveal: React.FC<BlurRevealProps> = ({
 
   return (
     <Component
-      initial={false}
+      initial={{
+        opacity: 0,
+        y: shouldReduceMotion ? 0 : yOffset,
+        filter: shouldReduceMotion ? "none" : `blur(${blur})`,
+        scale: !shouldReduceMotion && scale !== 1 ? scale : undefined,
+      }}
       whileInView={{
         opacity: 1,
         y: 0,
@@ -135,7 +140,7 @@ export const BlurRevealGroup: React.FC<BlurRevealGroupProps> = ({
   return (
     <Component
       variants={containerVariants}
-      initial={false}
+      initial="hidden"
       whileInView="visible"
       viewport={{
         once,
@@ -272,7 +277,7 @@ export const BlurRevealWords: React.FC<BlurRevealWordsProps> = ({
   return (
     <Component
       variants={containerVariants}
-      initial={false}
+      initial="hidden"
       whileInView="visible"
       viewport={{ once, amount }}
       className={cn("inline-block flex-wrap transform-gpu", className)}

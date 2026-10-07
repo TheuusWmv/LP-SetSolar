@@ -2,10 +2,7 @@ import React from "react";
 import { InfiniteSlider } from "./ui/infinite-slider";
 import { BlurReveal } from "./ui/blur-reveal";
 
-import bydLogo from "../assets/logos/byd.svg";
 import froniusLogo from "../assets/logos/fronius.svg";
-import huaweiLogo from "../assets/logos/huawei.svg";
-import sungrowLogo from "../assets/logos/sungrow.svg";
 import wegLogo from "../assets/logos/weg.svg";
 
 interface SolarBrandItem {
@@ -17,46 +14,58 @@ interface SolarBrandItem {
 }
 
 export const SolarLogoMarquee: React.FC = () => {
-  // Apenas as 5 marcas com suas logos originais dos arquivos SVG em src/assets/logos/
+  // As 7 marcas parceiras oficiais da Set Solar em Goiás
   const baseBrands: SolarBrandItem[] = [
-    {
-      id: "byd",
-      name: "BYD Energy",
-      category: "Baterias & Módulos Tier 1",
-      logoSrc: bydLogo,
-      heightClass: "h-9 sm:h-10 md:h-11",
-    },
     {
       id: "weg",
       name: "WEG Solar",
-      category: "Engenharia e Tradição Nacional",
+      category: "Engenharia e Tradição Nacional de Alta Confiabilidade",
       logoSrc: wegLogo,
       heightClass: "h-9 sm:h-10 md:h-11",
     },
     {
-      id: "huawei",
-      name: "Huawei FusionSolar",
-      category: "Tecnologia MPPT Inteligente",
-      logoSrc: huaweiLogo,
-      heightClass: "h-9 sm:h-10 md:h-11",
+      id: "deye",
+      name: "Deye",
+      category: "Líder em Inversores Híbridos e String Inteligentes",
+      logoSrc: "/logos/deye.png",
+      heightClass: "h-7 sm:h-8 md:h-9",
     },
     {
-      id: "sungrow",
-      name: "Sungrow Power",
-      category: "Inversores Comerciais & Industriais",
-      logoSrc: sungrowLogo,
-      heightClass: "h-8 sm:h-9 md:h-10",
+      id: "canadian",
+      name: "Canadian Solar",
+      category: "Painéis Fotovoltaicos Tier 1 de Alta Eficiência",
+      logoSrc: "/logos/canadian-solar.png",
+      heightClass: "h-7 sm:h-8 md:h-9",
+    },
+    {
+      id: "jinko",
+      name: "Jinko Solar",
+      category: "Tecnologia N-Type TOPCon Líder Global",
+      logoSrc: "/logos/jinko-solar.png",
+      heightClass: "h-7 sm:h-8 md:h-9",
+    },
+    {
+      id: "growatt",
+      name: "Growatt",
+      category: "Inversores Digitais com Monitoramento por App",
+      logoSrc: "/logos/growatt.png",
+      heightClass: "h-7 sm:h-8 md:h-9",
     },
     {
       id: "fronius",
       name: "Fronius",
-      category: "Inversores Premium Austríacos",
+      category: "Inversores Premium Austríacos de Alta Performance",
       logoSrc: froniusLogo,
-      heightClass: "h-9 sm:h-10 md:h-11",
+      heightClass: "h-8 sm:h-9 md:h-10",
+    },
+    {
+      id: "equatorial",
+      name: "Equatorial Goiás",
+      category: "Concessionária Homologada (Conexão e Injeção de Créditos ANEEL)",
+      logoSrc: "/logos/equatorial-goias.svg",
+      heightClass: "h-8 sm:h-9 md:h-10",
     },
   ];
-
-
 
   return (
     <section className="relative w-full bg-white pt-2 sm:pt-3 pb-8 sm:pb-10 border-b border-slate-100 overflow-hidden select-none">
@@ -67,7 +76,7 @@ export const SolarLogoMarquee: React.FC = () => {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-5 text-center"
       >
         <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
-          Usinas construídas exclusivamente com as maiores fabricantes solares Tier 1 do mundo
+          Tecnologia Tier 1 Mundial e Homologação Oficial na Equatorial Goiás
         </p>
       </BlurReveal>
 
@@ -77,14 +86,14 @@ export const SolarLogoMarquee: React.FC = () => {
         blur="10px"
         className="relative h-16 sm:h-20 w-full overflow-hidden flex items-center"
       >
-        <InfiniteSlider className="flex h-full w-full items-center" duration={32} gap={64}>
+        <InfiniteSlider className="flex h-full w-full items-center" duration={36} gap={64}>
           {baseBrands.map((brand, index) => (
             <div
               key={`${brand.id}-${index}`}
               className="group flex shrink-0 items-center justify-center px-6 sm:px-8 cursor-pointer"
               title={`${brand.name} — ${brand.category}`}
             >
-              <div className="flex shrink-0 items-center justify-center grayscale contrast-125 opacity-60 hover:opacity-100 transition-opacity duration-200 ease-out-strong">
+              <div className="flex shrink-0 items-center justify-center grayscale contrast-125 opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-200 ease-out-strong">
                 <img
                   src={brand.logoSrc}
                   alt={brand.name}

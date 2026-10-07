@@ -90,7 +90,7 @@ export default function FAQs({
   items = defaultFaqItems,
   title = "Perguntas frequentes",
   subtitle = "Tudo o que você precisa saber sobre instalação, homologação, economia e garantias do seu sistema solar.",
-  badge = "FAQ Sollux",
+  badge = "FAQ Set Solar",
   supportLink = "#",
   supportText = "Falar com nosso time de engenharia",
 }: FAQsProps) {

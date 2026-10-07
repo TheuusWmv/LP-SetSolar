@@ -23,12 +23,12 @@ export const FAQ: React.FC = () => {
             delay={0.04}
             stagger={0.12}
           >
-            {/* Eyebrow Pill alinhado com a identidade da World Place Solar */}
+            {/* Eyebrow Pill alinhado com a identidade da Set Solar */}
             <BlurRevealItem yOffset={14} blur="6px">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-slate-700 text-xs font-semibold tracking-wider uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)]" />
                 <span className="sm:hidden">FAQ</span>
-                <span className="hidden sm:inline">Dúvidas</span>
+                <span className="hidden sm:inline">Dúvidas Frequentes</span>
               </div>
             </BlurRevealItem>
 
@@ -45,7 +45,7 @@ export const FAQ: React.FC = () => {
                   Prefere conversar com a gente? Nossa equipe ajuda você a dar o primeiro passo.
                 </span>
                 <span className="hidden sm:inline">
-                  Quanto custa? Quando começa a economia? Veja o que considerar para decidir com segurança. Se a dúvida for sobre o seu imóvel, fale com um engenheiro da World Place Solar.
+                  Quanto custa? Quando começa a economia? Veja o que considerar para decidir com segurança. Se a dúvida for sobre o seu imóvel, fale com um engenheiro da Set Solar.
                 </span>
               </p>
             </BlurRevealItem>

@@ -42,25 +42,24 @@ export const CTA: React.FC = () => {
           <BlurReveal delay={0.12} yOffset={22} blur="8px" as="h2">
             <span className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.18] block max-w-sm sm:max-w-none">
               <span className="sm:hidden">
-                Reduza em até 95% a sua{" "}
-                <span className="text-[var(--brand-accent)]">conta de luz.</span>
+                Cada dia sem energia solar é{" "}
+                <span className="text-[var(--brand-accent)]">dinheiro na mesa.</span>
               </span>
               <span className="hidden sm:inline">
-                Reduza em até 95% o custo{" "}
-                <span className="text-[var(--brand-accent)]">da sua conta de luz.</span>
+                Cada dia sem energia solar é dinheiro deixado na mesa.{" "}
+                <span className="text-[var(--brand-accent)]">Descubra sua economia agora.</span>
               </span>
             </span>
           </BlurReveal>
 
           {/* Subtítulo Descritivo */}
           <BlurReveal delay={0.18} yOffset={20} blur="8px">
-            <p className="text-sm sm:text-base lg:text-lg text-slate-300 font-normal leading-relaxed max-w-xs sm:max-w-xl mx-auto text-pretty mt-4 sm:mt-5 mb-8 sm:mb-8">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-300 font-normal leading-relaxed max-w-xs sm:max-w-2xl mx-auto text-pretty mt-4 sm:mt-5 mb-8 sm:mb-8">
               <span className="sm:hidden">
-                Projetos e instalação de energia solar. Residencial | Comercial | Agronegócio. Faça uma simulação gratuita.
+                Em menos de 2 minutos, a engenharia da Set Solar calcula o dimensionamento ideal e a projeção de economia para o seu imóvel.
               </span>
               <span className="hidden sm:inline">
-                O primeiro passo é descobrir quanto você pode economizar.
-                Preencha o simulador gratuito para que a equipe da World Place Solar prepare um estudo personalizado para o seu imóvel ou agronegócio.
+                Faça uma simulação personalizada e sem compromisso. Em menos de 2 minutos, nossa equipe de engenharia calcula o tamanho ideal do seu sistema, o valor do investimento e a projeção do seu retorno financeiro.
               </span>
             </p>
           </BlurReveal>

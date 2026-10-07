@@ -123,7 +123,7 @@ export const App: React.FC = () => {
     submittingRef.current = true;
     setIsSubmitting(true);
     setSubmissionError('');
-    const generatedProtocol = `Protocolo CLA-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
+    const generatedProtocol = `Protocolo SET-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
 
     const metrics = calculateSolarEconomy(answers.monthlyBill || 500);
 
@@ -533,7 +533,7 @@ export const App: React.FC = () => {
                       ? `Onde você prefere receber a simulação, ${firstName}?`
                       : 'Onde você prefere receber a simulação?'
                   }
-                  subtitle="A World Place Solar entrará em contato para conversar sobre a sua simulação."
+                  subtitle="A Set Solar entrará em contato para conversar sobre a sua simulação."
                   onNext={goToNextStep}
                   onBack={goToPrevStep}
                   nextLabel={isSubmitting ? 'Enviando...' : 'Solicitar minha simulação'}

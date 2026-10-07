@@ -3,18 +3,18 @@ import assert from 'node:assert/strict';
 import { onRequest } from '../functions/api/leads.js';
 
 const payload = {
-  protocol: 'Protocolo WPS-12345678',
+  protocol: 'Protocolo SET-12345678',
   timestamp: '2026-09-30T12:00:00.000Z',
   lead: {
     leadType: 'pf', fullName: 'Maria Silva', phone: '62999999999',
     email: 'maria@example.com', city: 'Goiânia', state: 'GO', monthlyBill: 500,
   },
   metrics: { estimatedAnnualSavings: 5000, estimated25YearsSavings: 125000, savingsPercentage: 90 },
-  source: 'World Place Solar - Quiz BANT (PF)',
+  source: 'Set Solar - Quiz BANT (PF)',
 };
-const request = (body = payload, headers = {}) => new Request('https://worldplacesolar.example/api/leads', {
+const request = (body = payload, headers = {}) => new Request('https://setsolar.example/api/leads', {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json', Origin: 'https://worldplacesolar.example', ...headers },
+  headers: { 'Content-Type': 'application/json', Origin: 'https://setsolar.example', ...headers },
   body: JSON.stringify(body),
 });
 

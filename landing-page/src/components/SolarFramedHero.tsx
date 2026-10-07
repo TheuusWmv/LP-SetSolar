@@ -103,12 +103,11 @@ export const SolarFramedHero: React.FC = () => {
             {/* Background Image: Casa Moderna com Energia Solar */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none transform-gpu">
               <img
-                src="/images/energia-solar-1920.webp"
-                srcSet="/images/energia-solar-640.webp 640w, /images/energia-solar-1280.webp 1280w, /images/energia-solar-1920.webp 1920w"
+                src="/images/projetos/hero-set-solar.jpg"
                 sizes="100vw"
                 // @ts-ignore
                 fetchpriority="high"
-                alt="Casa moderna sustentável com painéis solares fotovoltaicos"
+                alt="Painéis solares fotovoltaicos instalados em telhado residencial em Goiás"
                 decoding="async"
                 loading="eager"
                 className="w-full h-full object-cover object-[center_35%] lg:object-[center_30%] scale-[1.02] transform-gpu pointer-events-none select-none"
@@ -131,7 +130,7 @@ export const SolarFramedHero: React.FC = () => {
             <div className="absolute top-0 left-0 right-0 z-30 flex justify-center pointer-events-none">
               <div className="hero-notch relative pointer-events-auto w-[84%] max-w-[360px] md:w-[92%] lg:w-[88%] md:max-w-5xl">
                 {/* Notch Body in Solid Pure White: Slim height (py-2), delicate border & soft shadow */}
-                <div className="relative bg-white border-b border-x border-slate-200/90 rounded-b-[1.5rem] md:rounded-b-[1.75rem] px-5 md:px-8 py-0 md:py-2.5 shadow-[0_16px_36px_rgba(0,0,0,0.35),0_4px_12px_rgba(0,0,0,0.18)] flex items-center justify-between text-neutral-900">
+                <div className="relative bg-white border-b border-slate-200/90 rounded-b-[1.5rem] md:rounded-b-[1.75rem] px-5 md:px-8 py-0 md:py-2.5 shadow-[0_16px_36px_rgba(0,0,0,0.35),0_4px_12px_rgba(0,0,0,0.18)] flex items-center justify-between text-neutral-900">
                   {/* Left Ear / Inverse Fillet Wing (GPU scale & fade) */}
                   <motion.div
                     style={{
@@ -176,9 +175,9 @@ export const SolarFramedHero: React.FC = () => {
                   <a
                     href="#"
                     className="flex items-center group transition-transform active:scale-[0.97] shrink-0"
-                    aria-label="World Place Solar - Início"
+                    aria-label="Set Solar - Início"
                   >
-                    <img src="/logo-worldplace.svg" alt="World Place Solar" className="h-8 md:h-9 w-auto object-contain" />
+                    <img src="/logo-setsolar.png" alt="Set Solar" className="h-8 md:h-9 w-auto object-contain" />
                   </a>
 
                   {/* Center Desktop Navigation Links (Single line, spacious, elegant) */}
@@ -269,8 +268,8 @@ export const SolarFramedHero: React.FC = () => {
                 <BlurReveal className="hidden md:block" delay={0.08} yOffset={14} blur="6px">
                   <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 md:py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[11px] md:text-xs font-medium tracking-wide mb-3 md:mb-5 shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)] animate-pulse-subtle" />
-                    <span className="md:hidden">World Place Solar</span>
-                    <span className="hidden md:inline">Projetos & Instalação em Goiânia e Região</span>
+                    <span className="md:hidden">Set Solar</span>
+                    <span className="hidden md:inline">Simulação 100% Gratuita • Mais de 600 Projetos Instalados em Goiás</span>
                     <span className="hidden md:inline text-white/40">•</span>
                     <span className="hidden md:inline text-[var(--brand-accent)] font-semibold">Até 95% de Economia</span>
                   </div>
@@ -280,17 +279,17 @@ export const SolarFramedHero: React.FC = () => {
                 <BlurReveal delay={0.16} yOffset={22} blur="8px" as="h1">
                   <span className="text-[2.15rem] leading-[1.08] md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-tight mb-3 md:mb-5 block">
                     <span className="md:hidden font-extrabold">
-                      Reduza em até 95% a sua conta de luz com{" "}
-                      <span className="text-[var(--brand-accent)]">energia solar.</span>
+                      Economize até 95% na sua conta de luz em{" "}
+                      <span className="text-[var(--brand-accent)]">Trindade e Goiás.</span>
                     </span>
                     <span className="hidden md:inline">
                       <span className="italic font-serif font-normal text-white/95 pr-2 md:pr-3">
-                        Energia
+                        Economize até
                       </span>
-                      <span className="font-extrabold text-white">solar.</span>
+                      <span className="font-extrabold text-[var(--brand-accent)]">95%</span>
                       <br />
-                      <span className="font-extrabold text-white">Reduza até</span>{" "}
-                      <span className="font-extrabold text-[var(--brand-accent)]">95% da sua conta.</span>
+                      <span className="font-extrabold text-white">na sua conta de luz em</span>{" "}
+                      <span className="font-extrabold text-white">Trindade e Goiás.</span>
                     </span>
                   </span>
                 </BlurReveal>
@@ -299,10 +298,10 @@ export const SolarFramedHero: React.FC = () => {
                 <BlurReveal delay={0.24} yOffset={20} blur="8px">
                   <p className="text-sm md:text-base lg:text-lg text-slate-200/90 font-normal leading-relaxed mb-6 md:mb-8 max-w-xl text-pretty">
                     <span className="md:hidden">
-                      Projetos e instalação de energia solar. Residencial | Comercial | Agronegócio em Goiânia e região.
+                      Projetos de alta performance para residências, empresas e agronegócio em Trindade, Goiânia e Goiás. Parcelamento em até 60x.
                     </span>
                     <span className="hidden md:inline">
-                      Projetos e instalação de energia solar fotovoltaica para residências, empresas e agronegócio em Goiânia e em todo o estado de Goiás. Descubra a sua economia estimada com uma simulação gratuita e sem compromisso.
+                      Projetos de alta performance para residências, empresas e agronegócio em Trindade, Goiânia e em todo o estado de Goiás. Do dimensionamento à homologação na Equatorial Goiás, nós cuidamos de tudo com engenharia de ponta e parcelamento em até 60x sem entrada.
                     </span>
                   </p>
                 </BlurReveal>
@@ -337,7 +336,7 @@ export const SolarFramedHero: React.FC = () => {
                     {/* Mobile bottom indicator */}
                     <div className="md:hidden flex items-center justify-between text-xs text-white/70 font-medium">
                       <span className="text-[11px] tracking-tight">
-                        Residencial • Comercial • Agronegócio
+                        +600 Projetos • Equatorial Homologada • 25 Anos Garantia
                       </span>
                       <a
                         href="#about"
@@ -352,15 +351,19 @@ export const SolarFramedHero: React.FC = () => {
                     <div className="hidden md:flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/70 font-medium">
                       <span className="flex items-center gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
-                        Simulação 100% gratuita
+                        +600 Projetos Instalados
                       </span>
                       <span className="flex items-center gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
-                        Sem compromisso de contratar
+                        Equatorial Goiás Homologada
                       </span>
                       <span className="flex items-center gap-1.5">
                         <ShieldCheck className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
-                        Residencial, Comercial e Agro
+                        Parcelamento em até 60x
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <ShieldCheck className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
+                        25 Anos de Garantia
                       </span>
                     </div>
                   </div>

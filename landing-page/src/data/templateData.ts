@@ -22,6 +22,7 @@ export interface TestimonialItem {
   company: string;
   city: string;
   avatar: string;
+  installationImage: string;
   rating: number;
   highlight: string;
   quote: string;
@@ -54,90 +55,84 @@ export interface PartnerBrand {
 
 export const templateData = {
   company: {
-    name: "World Place Solar",
-    shortName: "World Place",
-    razaoSocial: "World Place Solucoes e Construcao LTDA",
-    cnpj: "42.774.704/0001-61",
-    tagline: "Reduza em até 95% a sua conta de luz",
-    subheadline:
-      "Projetos e instalação de energia solar fotovoltaica para residências, empresas e agronegócio em Goiânia e em todo o estado de Goiás. Faça uma simulação gratuita e comece a economizar.",
-    whatsapp: "5562991533755",
-    whatsappDefaultMessage:
-      "Olá! Quero uma simulação gratuita da World Place Solar para saber quanto posso economizar na minha conta de luz.",
-    phone: "(62) 99153-3755",
-    phoneFormatted: "+55 (62) 99153-3755",
-    email: "",
-    workingHours: "Segunda a Sexta, das 08h às 18h",
-    city: "Goiânia",
+    name: "Set Solar",
+    shortName: "Set Solar",
+    razaoSocial: "Set Solar Ltda.",
+    cnpj: "37.325.291/0001-06",
+    phone: "(62) 9 8487-9184",
+    phoneFormatted: "+55 (62) 9 8487-9184",
+    whatsapp: "5562984879184",
+    email: "settecnologiasolar@gmail.com",
+    address: "Av. Manoel Monteiro, nº 1717, Centro / Setor Oeste",
+    city: "Trindade",
     state: "GO",
-    address: "Avenida Comercial Esquina Com Rua Ipiranga, 625, Qd 116, Lt 04, Jd. Nova Esperança, Goiânia - GO",
-    regionCovered: "Goiânia, Região Metropolitana e Goiás",
-    instagram: "https://www.instagram.com/world_placesolar/",
+    cep: "75392-725",
+    hours: "Segunda a Sexta: 08h às 18h | Sábado: 08h às 12h",
+    workingHours: "Segunda a Sexta: 08h às 18h | Sábado: 08h às 12h",
+    tagline: "Tecnologia em Energia Solar e Comprometimento com o Planeta",
+    subheadline:
+      "Projetos de alta performance para residências, empresas e agronegócio em Trindade, Goiânia e em todo o estado de Goiás. Do dimensionamento à homologação na Equatorial Goiás, nós cuidamos de tudo.",
+    whatsappDefaultMessage:
+      "Olá! Gostaria de fazer uma simulação gratuita de energia solar com a Set Solar para o meu imóvel.",
     simulatorUrl: "/simulador/",
+    regionCovered: "Trindade, Região Metropolitana e todo o estado de Goiás",
+    instagram: "https://www.instagram.com/setsolar/",
   },
 
   partnerBrands: [
-    { name: "BYD Energy", category: "Baterias & Módulos Tier 1" },
-    { name: "WEG Solar", category: "Engenharia e Tradição Nacional" },
-    { name: "Huawei Solar", category: "Inversores Digitais Inteligentes" },
-    { name: "Fronius", category: "Inversores Premium Austríacos" },
-    { name: "Canadian Solar", category: "Líder Global em Fotovoltaico" },
-    { name: "DAH Solar", category: "Módulos Full-Screen Patenteados" },
-    { name: "Sungrow", category: "Alta Potência & Confiabilidade" },
-    { name: "SAJ Electric", category: "Inversores & Armazenamento" },
+    { name: "WEG Solar", category: "Engenharia e Tradição Nacional de Alta Confiabilidade" },
+    { name: "Deye", category: "Líder em Inversores Híbridos e String Inteligentes" },
+    { name: "Canadian Solar", category: "Painéis Fotovoltaicos Tier 1 de Alta Eficiência" },
+    { name: "Jinko Solar", category: "Tecnologia N-Type TOPCon Líder Global" },
+    { name: "Growatt", category: "Inversores Digitais com Monitoramento por App" },
+    { name: "Fronius", category: "Inversores Premium Austríacos de Alta Performance" },
+    { name: "Equatorial Goiás", category: "Concessionária Homologada (Conexão e Injeção de Créditos)" },
   ],
 
   howItWorks: {
-    badge: "Como Funciona",
-    title: "Do orçamento à geração, você sabe cada próximo passo.",
+    badge: "Processo Turn-Key Descomplicado",
+    title: "Do orçamento à geração, você sabe exatamente cada próximo passo.",
     subtitle:
-      "Nossa equipe técnica cuida do dimensionamento, engenharia, instalação e de todos os trâmites de homologação junto à concessionária de energia. Estimativa total:",
-    highlightDuration: "45 a 75 dias",
-    buttonText: "Simular minha economia",
+      "Nossa equipe técnica cuida do dimensionamento, engenharia com ART, homologação na Equatorial Goiás e instalação. Você acompanha tudo sem burocracia. Estimativa total:",
+    highlightDuration: "30 a 60 dias",
+    buttonText: "Simular minha economia agora",
   },
 
   howItWorksSteps: [
     {
       number: "01",
-      title: "Visita técnica",
+      title: "Diagnóstico Gratuito",
       duration: "1 dia",
       description:
-        "Análise estrutural do telhado ou solo, verificação do padrão de entrada e estudo de sombreamento.",
+        "Analisamos seu histórico na conta de luz da Equatorial Goiás para calcular a potência em kWp, o número ideal de módulos e a economia projetada.",
     },
     {
       number: "02",
-      title: "Engenharia & Projeto",
-      duration: "3 a 5 dias",
+      title: "Visita Técnica & Engenharia",
+      duration: "2 a 3 dias",
       description:
-        "Dimensionamento elétrico, escolha dos inversores e módulos Tier 1 e cálculo da geração anual esperada.",
+        "Engenheiro elétrico avalia a estrutura do telhado ou solo, padrão de entrada de energia e sombreamento, emitindo o projeto elétrico oficial com ART.",
     },
     {
       number: "03",
-      title: "Parecer de acesso",
+      title: "Homologação Equatorial Goiás",
       duration: "até 15 dias",
       description:
-        "Protocolamos o projeto na concessionária de energia e acompanhamos todas as etapas regulatórias.",
+        "Protocolamos toda a documentação regulatória junto à concessionária Equatorial Goiás e acompanhamos a emissão do parecer de acesso sem você precisar sair de casa.",
     },
     {
       number: "04",
-      title: "Instalação especializada",
+      title: "Instalação Especializada",
       duration: "1 a 3 dias",
       description:
-        "Fixação estrutural, montagem dos módulos, cabeamento e inversores. A rede local só para na conexão.",
+        "Montagem ágil e segura das estruturas de fixação, painéis fotovoltaicos Tier 1, cabeamento e inversores por equipe própria treinada pelas normas NR-10 e NR-35.",
     },
     {
       number: "05",
-      title: "Vistoria e medidor",
-      duration: "até 7 dias",
+      title: "Ativação & Monitoramento",
+      duration: "no mesmo dia da vistoria",
       description:
-        "A distribuidora realiza a vistoria técnica e substitui o medidor pelo modelo bidirecional homologado.",
-    },
-    {
-      number: "06",
-      title: "Sistema gerando",
-      duration: "no mesmo dia",
-      description:
-        "Com a autorização concedida, ativamos o sistema e sua economia de até 95% começa imediatamente.",
+        "A concessionária instala o medidor bidirecional, ativamos o sistema e configuramos o aplicativo no seu smartphone para acompanhar a geração em tempo real e economizar até 95%.",
     },
   ] as StepItem[],
 
@@ -146,17 +141,16 @@ export const templateData = {
       id: "residencial",
       number: "01",
       title: "Energia Solar Residencial",
-      category: "Casas & Condomínios",
+      category: "Casas e Condomínios Fechados",
       description:
-        "Mais conforto em casa, menos peso na conta de luz. Use seu telhado para gerar energia e deixe mais espaço no orçamento para os planos da família.",
+        "Mais conforto para ligar o ar-condicionado sem peso na consciência e no bolso. Transforme a luz do sol em economia mensal de até 95% para a sua família em Trindade e região.",
       features: [
-        "Economia de até 95% todo mês",
-        "Valorização patrimonial imediata",
-        "Instalação rápida de 1 a 2 dias",
-        "Monitoramento fácil pelo celular",
+        "Economia imediata de até 95% na fatura de luz",
+        "Valorização patrimonial instantânea de 8% a 12%",
+        "Instalação rápida e limpa em 1 a 2 dias úteis",
+        "Monitoramento intuitivo da geração pelo celular",
       ],
-      image:
-        "/images/solar-residencial.jpg",
+      image: "/images/projetos/residencial-le-jardam.png",
       badge: "Mais Procurado",
       startingPrice: "Orçamento sob medida",
       rating: "5.0",
@@ -164,117 +158,213 @@ export const templateData = {
     {
       id: "comercial",
       number: "02",
-      title: "Energia Solar Comercial",
-      category: "Empresas & Varejo",
+      title: "Comercial e Empresas",
+      category: "Posto Mak, Escolas, Frigoríficos",
       description:
-        "Sua empresa trabalha para crescer. A conta de luz não precisa levar tanto do resultado. Gere parte da energia que consome e libere recursos para reinvestir.",
+        "Sua empresa trabalha para dar lucro, não para pagar faturas de energia exorbitantes. Reduza custos fixos operacionais de ar-condicionado, câmaras frias e maquinários.",
       features: [
-        "Redução direta nos custos fixos",
-        "Payback acelerado (2 a 3 anos)",
-        "Financiamento que se paga com a economia",
-        "Selo ESG para a sua marca",
+        "Alívio massivo nos custos fixos operacionais",
+        "Payback acelerado (2,5 a 4 anos)",
+        "Financiamento que se paga com o valor economizado",
+        "Casos reais: Posto Mak, Território da Carne, Escola Dinâmica",
       ],
-      image:
-        "/images/solar-comercial.jpg",
-      badge: "ROI Rápido",
-      startingPrice: "Retorno estimado no projeto",
-      rating: "4.9",
+      image: "/images/projetos/posto-mak.jpg",
+      badge: "ROI Rápido (3 Anos)",
+      startingPrice: "Retorno acelerado",
+      rating: "5.0",
     },
     {
       id: "rural",
       number: "03",
-      title: "Solar Rural & Agronegócio",
-      category: "Fazendas, Granjas & Aviários",
+      title: "Rural e Agronegócio",
+      category: "Fazendas e Galpões",
       description:
-        "Granjas, aviários, ordenhas e pivôs de irrigação consomem energia intensiva todos os dias. No Oeste Catarinense, reduza esse custo fixo com segurança técnica e alta durabilidade.",
+        "Ordenhas mecânicas, pivôs de irrigação, silos e resfriadores de leite demandam energia intensiva contínua. Proteja a rentabilidade da sua fazenda contra oscilações de custos.",
       features: [
-        "Operação contínua de irrigação, aviários e maquinários",
-        "Linhas especiais Safra, Pronaf e Finame/BNDES Agro",
-        "Instalações robustas em solo ou coberturas de barracões",
-        "Proteção e estabilidade contra oscilações da rede elétrica",
+        "Estabilidade e autonomia para operações contínuas no campo",
+        "Estruturas de solo reforçadas ou sobre barracões metálicos",
+        "Acesso a linhas de crédito agro subsidiadas (FCO, Pronaf e Pronamp)",
+        "Engenharia com proteção contra descargas e intempéries",
       ],
-      image:
-        "/images/solar-rural.jpg",
-      badge: "Crédito Rural",
-      startingPrice: "Linhas Pronaf / Safra",
+      image: "/images/projetos/rural-agro.jpg",
+      badge: "Linhas Safra & Pronaf",
+      startingPrice: "Linhas FCO / Safra",
       rating: "5.0",
     },
     {
-      id: "industrial",
+      id: "eletromobilidade",
       number: "04",
-      title: "Solar Industrial & Média Tensão",
-      category: "Indústrias & Grandes Cargas",
+      title: "Eletromobilidade & Carport",
+      category: "Carregadores Wallbox e Garagens Solares",
       description:
-        "Cada redução no custo de energia amplia a margem operacional da sua indústria. Dimensionamos subestações e geração fotovoltaica com engenharia de precisão e laudos com ART.",
+        "Abasteça seu veículo elétrico ou híbrido com a energia do sol direto na garagem da sua casa ou empresa. Expertise consolidada na implantação de eletropostos e garagens solares.",
       features: [
-        "Subestações e conexão homologada em média tensão",
-        "Contratos de desempenho e garantia de geração",
-        "Laudos estruturais e responsabilidade técnica (ART)",
-        "Amortização rápida de ativo com redução de encargos",
+        "Carregamento seguro e homologado com proteções elétricas",
+        "Integração inteligente com inversores híbridos e solares",
+        "Economia absoluta em comparação com gasolina ou diesel",
+        "Valorização de estacionamentos corporativos e centros comerciais",
       ],
-      image:
-        "/images/solar-industrial.jpg",
-      badge: "Alta Tensão",
+      image: "/images/projetos/eletromobilidade.png",
+      badge: "Pioneirismo Set Solar",
       startingPrice: "Projetos Sob Medida",
-      rating: "4.9",
+      rating: "5.0",
     },
     {
-      id: "baterias",
+      id: "usinas",
       number: "05",
-      title: "Baterias & Backup Off-Grid / Híbrido",
-      category: "Armazenamento Inteligente",
+      title: "Usinas de Solo & Investimento",
+      category: "Geração Compartilhada & Investidores",
       description:
-        "Quando a rede elétrica oscilar ou cair, as operações essenciais continuam ativas. Projetamos sistemas híbridos com baterias para garantir autonomia contínua à sua estrutura.",
+        "Gere energia limpa em propriedade rural ou lote vago e compense créditos nas faturas de múltiplos imóveis urbanos cadastrados no mesmo CPF ou CNPJ perante a Equatorial Goiás.",
       features: [
-        "Energia contínua garantida em apagões e quedas de rede",
-        "Baterias de Lítio LiFePO4 de ciclo profundo e longa vida",
-        "Transição automática instantânea em milissegundos",
-        "Independência energética para cargas críticas e câmaras frias",
+        "Sem necessidade de espaço em telhado urbano",
+        "Centralização da geração para dezenas de filiais ou residências",
+        "Rentabilidade superior a investimentos de renda fixa",
+        "Projeto completo com cercamento, engenharia e subestação",
       ],
-      image:
-        "/images/solar-baterias.jpg",
-      badge: "Autonomia Total",
-      startingPrice: "Autonomia sob medida",
+      image: "/images/projetos/usinas-solo.jpg",
+      badge: "Alta Rentabilidade",
+      startingPrice: "Máximo Retorno",
       rating: "5.0",
     },
   ] as ServiceItem[],
 
+  testimonials: [
+    {
+      id: "marcos-cordeiro",
+      name: "Marcos V. Cordeiro",
+      role: "Proprietário Residencial",
+      company: "Residencial Trindade",
+      city: "Trindade - GO",
+      avatar: "/images/avatar-carlos.jpg",
+      installationImage: "/images/projetos/residencial-le-jardam.png",
+      rating: 5,
+      highlight: "Economia de R$ 850 para R$ 90/mês",
+      quote:
+        "Minha conta de luz caiu de R$ 850 para R$ 90! A equipe da Set Solar foi impecável do início ao fim. O engenheiro Davi explicou tudo com muita transparência e a instalação durou menos de 2 dias. Recomendo de olhos fechados.",
+      stats: {
+        label: "Economia mensal",
+        value: "89% ao mês",
+      },
+    },
+    {
+      id: "rogerio-mendes",
+      name: "Rogério Mendes",
+      role: "Comerciante / Posto Mak",
+      company: "Posto Mak & Conveniência",
+      city: "Goiânia - GO",
+      avatar: "/images/avatar-guilherme.jpg",
+      installationImage: "/images/projetos/posto-mak.jpg",
+      rating: 5,
+      highlight: "Redução de R$ 2.000/mês",
+      quote:
+        "Investimos em energia solar para nossa empresa e em menos de 3 anos o sistema já se pagou completamente. Hoje economizamos mais de R$ 2.000 por mês, valor que reaplicamos em estoque e melhorias na empresa.",
+      stats: {
+        label: "Economia mensal",
+        value: "+R$ 2.000,00/mês",
+      },
+    },
+    {
+      id: "hamilton-oliveira",
+      name: "Hamilton de Oliveira",
+      role: "Produtor Rural",
+      company: "Fazenda Campo Belo",
+      city: "Iporá - GO",
+      avatar: "/images/avatar-roberto.jpg",
+      installationImage: "/images/projetos/rural-agro.jpg",
+      rating: 5,
+      highlight: "Projeto perfeito sem surpresas",
+      quote:
+        "A Set Solar entendeu perfeitamente a necessidade da nossa fazenda, dimensionando os painéis para suportar os maquinários e o poço artesiano. Economia real e suporte de pós-venda excepcional.",
+      stats: {
+        label: "Autonomia",
+        value: "100% Diurna",
+      },
+    },
+    {
+      id: "dr-paulo-roberto",
+      name: "Dr. Paulo Roberto",
+      role: "Médico e Empreendedor",
+      company: "Clínica & Residência",
+      city: "Trindade - GO",
+      avatar: "/images/avatar-carlos.jpg",
+      installationImage: "/images/projetos/clinica-dr-paulo.png",
+      rating: 5,
+      highlight: "Acabamento técnico impecável",
+      quote:
+        "Equipe altamente técnica! O projeto da clínica e da residência foi entregue antes do prazo previsto, com acabamento impecável na fixação dos painéis e instalação dos inversores. Monitoro tudo pelo celular diariamente. Nota 10!",
+      stats: {
+        label: "Instalação",
+        value: "Clínica & Casa",
+      },
+    },
+    {
+      id: "escola-dinamica",
+      name: "Coordenação Escola Dinâmica",
+      role: "Diretoria e Gestão",
+      company: "Escola Dinâmica",
+      city: "Trindade - GO",
+      avatar: "/images/avatar-fabiana.jpg",
+      installationImage: "/images/projetos/escola-dinamica.png",
+      rating: 5,
+      highlight: "Exemplo de sustentabilidade",
+      quote:
+        "Excelente trabalho de toda a equipe da Set Solar, desde o atendimento comercial até a conclusão da obra. Além da economia financeira expressiva nas despesas da escola, nossos alunos aprendem sobre energia limpa na prática.",
+      stats: {
+        label: "Impacto",
+        value: "Economia Contínua",
+      },
+    },
+  ] as TestimonialItem[],
+
   faqs: [
     {
-      question: "Quando começo a gerar minha própria energia?",
+      question: "Quanto realmente posso economizar na fatura de luz com a Set Solar?",
       answer:
-        "A instalação dos equipamentos em uma residência costuma levar de 1 a 3 dias úteis. O processo completo, da visita técnica ao sistema ligado e homologado, tem estimativa média de 45 a 75 dias. Nossa equipe da World Place Solar conduz todo o protocolo junto à distribuidora e mantém você informado.",
-      category: "Instalação",
+        "Com o sistema fotovoltaico on-grid instalado pela Set Solar, você pode reduzir em até 95% o valor da sua conta de energia. Você continuará pagando à concessionária (Equatorial Goiás) apenas a taxa mínima de disponibilidade da rede elétrica (custo de disponibilidade) e a taxa municipal de iluminação pública.",
+      category: "Economia",
     },
     {
-      question: "Quanto custa e como saber se vale a pena?",
+      question: "Como funciona o financiamento em até 60x sem entrada?",
       answer:
-        "O investimento depende do seu consumo médio, dos equipamentos e do local de instalação. Com nossa simulação gratuita, calculamos a economia estimada de até 95% e o tempo de retorno (payback) antes de você fechar contrato.",
-      category: "Financeiro",
+        "Temos parcerias com os maiores bancos e fintechs do Brasil (Santander, BV, Solfácil, Banco do Brasil, Sicredi e Sicoob). Você pode financiar 100% do projeto em até 60 parcelas e com carência de até 90 a 120 dias. Na prática, o valor que você economiza na conta de luz logo nos primeiros meses é utilizado para pagar a própria parcela do financiamento.",
+      category: "Financiamento",
     },
     {
-      question: "E nos dias nublados ou durante a noite?",
+      question: "O sistema continua gerando energia em dias nublados ou com chuva?",
       answer:
-        "Os módulos solares geram energia através da radiação luminosa, mesmo em dias nublados ou chuvosos (com produção proporcional). À noite, seu imóvel utiliza a rede da concessionária ou o saldo de créditos gerados pelo próprio sistema durante o dia.",
+        "Sim! Os painéis fotovoltaicos operam através da radiação luminosa e não apenas do calor ou da luz solar direta. Mesmo em dias chuvosos ou com céu encoberto, o sistema continua gerando eletricidade em níveis proporcionais. O dimensionamento da Set Solar considera todo o histórico meteorológico anual de Goiás.",
       category: "Técnico",
     },
     {
-      question: "Preciso pagar tudo à vista?",
+      question: "A Set Solar cuida de toda a aprovação e homologação na Equatorial Goiás?",
       answer:
-        "Não. Trabalhamos com diversas linhas de financiamento bancário e crédito rural, onde o valor da parcela é frequentemente menor ou equivalente ao que você já economiza na conta de luz todo mês.",
-      category: "Financeiro",
-    },
-    {
-      question: "A World Place Solar cuida da homologação na concessionária?",
-      answer:
-        "Sim, 100%! Cuidamos de todo o processo de engenharia, emissão de ART, entrada do parecer de acesso e acompanhamento da vistoria e troca do medidor até a ativação definitiva do sistema.",
+        "Sim, assumimos 100% da responsabilidade burocrática e técnica no modelo Turn-key. Realizamos o projeto elétrico com ART assinada por engenheiro, protocolamos a documentação perante a Equatorial Goiás, acompanhamos o parecer de acesso e orientamos a vistoria até a troca do medidor pelo relógio bidirecional.",
       category: "Regulatório",
     },
     {
-      question: "O sistema funciona em caso de queda de energia na rua?",
+      question: "Quais são as garantias dos equipamentos instalados?",
       answer:
-        "Em sistemas conectados à rede padrão (on-grid), o inversor se desliga por segurança técnica dos operadores da rede. Caso sua residência, empresa ou granja necessite de energia ininterrupta, desenvolvemos soluções híbridas com banco de baterias.",
-      category: "Técnico",
+        "Trabalhamos exclusivamente com fabricantes globais Tier 1 (como Canadian Solar, Jinko Solar, WEG e Deye). Os módulos fotovoltaicos possuem 25 anos de garantia de eficiência de geração linear, os inversores contam com garantia de fábrica de 5 a 12 anos, e a Set Solar garante a qualidade de montagem e engenharia da instalação.",
+      category: "Garantia",
+    },
+    {
+      question: "Quanto tempo leva a instalação no meu imóvel?",
+      answer:
+        "A montagem física no telhado de uma residência leva em média de 1 a 3 dias úteis, sem sujeira e sem interferir na rotina da família. Em empresas e propriedades rurais, o prazo fica entre 3 a 7 dias. O processo regulatório completo até a aprovação da concessionária dura em média de 30 a 60 dias.",
+      category: "Instalação",
+    },
+    {
+      question: "E se eu mudar de imóvel no futuro?",
+      answer:
+        "O sistema fotovoltaico é um patrimônio seu. Caso você se mude, ele pode ser desinstalado e reinstalado no seu novo endereço ou você pode deixar o sistema no imóvel atual, que terá uma valorização imobiliária média de 8% a 12% no momento da venda ou locação.",
+      category: "Patrimônio",
+    },
+    {
+      question: "Qual é a manutenção necessária para o sistema solar?",
+      answer:
+        "A manutenção é mínima. Como os módulos possuem tecnologia antiaderente, a própria água da chuva realiza uma limpeza básica. Recomendamos apenas uma limpeza especializada a cada 6 a 12 meses para retirar poeira acumulada, serviço que a Set Solar também oferece para garantir que sua geração opere sempre no máximo rendimento.",
+      category: "Manutenção",
     },
   ] as FAQItem[],
 };

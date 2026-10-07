@@ -8,23 +8,42 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#d4f658',
-          foreground: '#000000',
+          DEFAULT: '#D4942A',
+          foreground: '#FFFFFF',
+          hover: '#B47218',
+        },
+        solar: {
+          lime: '#D4942A',
+          hover: '#B47218',
+          active: '#92560D',
+          soft: '#FEF9EE',
+          yellow: '#F59E0B',
+          blue: '#1B3A5C',
+          'blue-secondary': '#2B5885',
+          'blue-dark': '#0D1E30',
+          navy: '#0B1827',
         },
         lime: {
-          solar: '#d4f658',
-          hover: '#c4e840',
-          light: '#f4fce3',
-          dark: '#1c2208',
+          solar: '#D4942A',
+          hover: '#B47218',
+          light: '#FEF9EE',
+          dark: '#0B1827',
         },
         dark: {
-          primary: '#111827',
-          secondary: '#374151',
-          muted: '#6b7280',
+          primary: '#0B1827',
+          secondary: '#1B3A5C',
+          muted: '#64748b',
           card: '#ffffff',
-          surface: '#f9fafb',
-          border: '#e5e7eb',
+          surface: '#f8fafc',
+          border: '#e2e8f0',
         },
+      },
+      backgroundImage: {
+        'gradient-cta': 'linear-gradient(135deg, #F59E0B 0%, #D4942A 100%)',
+        'gradient-hero': 'linear-gradient(115deg, #070F18 0%, #0D1E30 80%)',
+      },
+      boxShadow: {
+        'glow-solar': '0 0 30px -5px rgba(212, 148, 42, 0.40)',
       },
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],

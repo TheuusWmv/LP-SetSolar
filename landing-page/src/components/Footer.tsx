@@ -144,9 +144,9 @@ export const Footer: React.FC = () => {
               <a
                 href="#"
                 className="inline-flex items-center group transition-transform duration-160 ease-out-strong active:scale-[0.97]"
-                aria-label="World Place Solar"
+                aria-label="Set Solar"
               >
-                <img src="/logo-worldplace.svg" alt="World Place Solar" className="h-10 sm:h-11 w-auto object-contain" />
+                <img src="/logo-setsolar.png" alt="Set Solar" className="h-10 sm:h-11 w-auto object-contain" />
               </a>
 
               <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-sm text-pretty">
@@ -154,13 +154,14 @@ export const Footer: React.FC = () => {
                   Energia solar de alta performance para residências, empresas e agronegócio.
                 </span>
                 <span className="hidden md:inline">
-                  A World Place Solar transforma luz solar em autonomia financeira e sustentabilidade para residências, comércios e agronegócio em Goiânia e em todo o estado de Goiás.
+                  A Set Solar transforma luz solar em autonomia financeira e sustentabilidade para residências, comércios e agronegócio em Trindade, Goiânia e em todo o estado de Goiás.
                 </span>
               </p>
 
               <div className="pt-1 text-xs text-slate-500 space-y-1">
                 <p className="font-medium text-slate-700">{company.razaoSocial}</p>
-                <p>CNPJ: {company.cnpj} • Goiânia - GO</p>
+                <p>CNPJ: {company.cnpj} • Trindade - GO</p>
+                <p>{company.address}</p>
               </div>
 
               {company.email && <div className="hidden md:block pt-1">
@@ -183,7 +184,7 @@ export const Footer: React.FC = () => {
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Fale pelo WhatsApp ↗</a>
                   <a href={`tel:+55${company.phone.replace(/\D/g, "")}`}>{company.phoneFormatted || company.phone}</a>
                   {company.instagram && (
-                    <a href={company.instagram} target="_blank" rel="noopener noreferrer">Instagram @world_placesolar ↗</a>
+                    <a href={company.instagram} target="_blank" rel="noopener noreferrer">Instagram @setsolar ↗</a>
                   )}
                   {company.email && <a href={`mailto:${company.email}`}>{company.email}</a>}
                   <p className="text-xs leading-relaxed mt-2">{company.address}</p>
@@ -235,7 +236,7 @@ export const Footer: React.FC = () => {
                   <ul className="space-y-2 text-xs text-slate-500">
                     <li>
                       <a href="#about" className="hover:text-neutral-950 transition-colors block">
-                        Sobre a World Place Solar
+                        Sobre a Set Solar
                       </a>
                     </li>
                     <li>
@@ -298,7 +299,7 @@ export const Footer: React.FC = () => {
                           rel="noopener noreferrer"
                           className="hover:text-neutral-950 transition-colors block font-medium text-slate-700"
                         >
-                          Instagram @world_placesolar ↗
+                          Instagram @setsolar ↗
                         </a>
                       </li>
                     )}

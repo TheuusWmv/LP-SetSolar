@@ -19,6 +19,8 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   residencial: Home,
   comercial: Building2,
   rural: Tractor,
+  eletromobilidade: BatteryCharging,
+  usinas: Factory,
   industrial: Factory,
   baterias: BatteryCharging,
 };
@@ -28,6 +30,8 @@ const shortNames: Record<string, string> = {
   residencial: "Residencial",
   comercial: "Comercial",
   rural: "Rural & Agro",
+  eletromobilidade: "Eletromobilidade",
+  usinas: "Usinas de Solo",
   industrial: "Industrial",
   baterias: "Baterias",
 };
@@ -106,20 +110,19 @@ export const Services: React.FC = () => {
           <BlurRevealItem yOffset={14} blur="6px">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/80 text-neutral-800 text-xs font-semibold tracking-wide uppercase shadow-2xs mb-4">
               <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" />
-              <span>Nossas Soluções</span>
+              <span>Soluções Completas em Energia Solar</span>
             </div>
           </BlurRevealItem>
 
           <BlurRevealItem yOffset={20} blur="8px" as="h2">
             <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight leading-[1.16] block">
-              Menos gasto com energia.{" "}
-              <span className="text-[var(--solar-blue-primary)]">Mais espaço para seus planos.</span>
+              Projetos sob medida para cada tipo de necessidade e consumo
             </span>
           </BlurRevealItem>
 
           <BlurRevealItem yOffset={20} blur="8px">
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mt-4">
-              Mais folga no orçamento de casa, mais margem na empresa ou menor custo no campo. Escolha seu perfil e veja como a energia solar pode trabalhar a seu favor.
+              Seja para sua residência, comércio, propriedade rural ou parque solar, temos a engenharia ideal com equipamentos certificados Tier 1.
             </p>
           </BlurRevealItem>
         </BlurRevealGroup>

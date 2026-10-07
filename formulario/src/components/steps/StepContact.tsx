@@ -155,7 +155,7 @@ export const StepContact: React.FC<StepContactProps> = ({
         )}
       </div>
       <p className="mt-4 text-xs leading-relaxed text-slate-500">
-        Ao enviar, seus dados serão encaminhados à World Place Solar para responder à sua simulação. Veja o{' '}
+        Ao enviar, seus dados serão encaminhados à Set Solar para responder à sua simulação. Veja o{' '}
         <a href="/privacidade.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 text-slate-700">aviso de privacidade</a>.
       </p>
     </div>

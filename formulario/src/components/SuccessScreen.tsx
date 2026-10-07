@@ -80,7 +80,7 @@ export const SuccessScreen: React.FC<SuccessScreenProps> = ({
             onClick={onRedirectNow}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 min-h-12 py-3 rounded-full bg-[var(--brand-accent)] hover:bg-[var(--brand-accent-hover)] text-[var(--brand-accent-text)] font-bold text-sm tracking-tight transition-all shadow-xs hover:shadow-sm active:scale-[0.98] cursor-pointer"
           >
-            <span>Voltar ao site da World Place Solar</span>
+            <span>Voltar ao site da Set Solar</span>
             <ArrowRight className="w-4 h-4" />
           </button>
           <span className="text-xs text-slate-400 font-normal select-none">

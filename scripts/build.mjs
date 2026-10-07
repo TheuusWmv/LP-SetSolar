@@ -40,7 +40,7 @@ await writeFile(path.join(output, '_headers'), [
 const robotsPath = path.join(output, 'robots.txt');
 const robots = await readFile(robotsPath, 'utf8');
 await writeFile(robotsPath, `${robots.trim()}\nDisallow: /simulador/\nDisallow: /api/\n`);
-await writeFile(path.join(output, '404.html'), '<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Página não encontrada | World Place Solar</title><body><h1>Página não encontrada</h1><p><a href="/">Voltar ao início</a></p></body></html>');
+await writeFile(path.join(output, '404.html'), '<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Página não encontrada | Set Solar</title><body><h1>Página não encontrada</h1><p><a href="/">Voltar ao início</a></p></body></html>');
 
 const simulator = await readFile(path.join(output, 'simulador', 'index.html'), 'utf8');
 if (!simulator.includes('noindex')) throw new Error('O simulador precisa permanecer fora do índice de busca.');

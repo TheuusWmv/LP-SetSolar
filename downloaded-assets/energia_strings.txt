@@ -1,0 +1,823 @@
+read from private field
+---
+Cannot add the same private member more than once
+---
+write to private field
+---
+access private method
+---
+setState(...): takes an object of state variables to update or a function which returns an object of state variables.
+---
+Objects are not valid as a React child (found: 
+---
+). If you meant to render a collection of children, use an array instead.
+---
+act(...) is not supported in production builds of React.
+---
+React.Children.only expected to receive a single React element child.
+---
+React.cloneElement(...): The argument must be a React element, but you passed 
+---
+forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported
+---
+https://reactjs.org/docs/error-decoder.html?invariant=
+---
+Minified React error #
+---
+ for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+---
+children dangerouslySetInnerHTML defaultValue defaultChecked innerHTML suppressContentEditableWarning suppressHydrationWarning style
+---
+externalResourcesRequired
+---
+allowFullScreen async autoFocus autoPlay controls default defer disabled disablePictureInPicture disableRemotePlayback formNoValidate hidden loop noModule noValidate open playsInline readOnly required reversed scoped seamless itemScope
+---
+accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height
+---
+xlink:actuate xlink:arcrole xlink:role xlink:show xlink:title xlink:type
+---
+mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset submit
+---
+abort auxClick cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel
+---
+change click focusin focusout input keydown keyup selectionchange
+---
+focusout contextmenu dragend focusin keydown keyup mousedown mouseup selectionchange
+---
+compositionend focusout keydown keypress keyup mousedown
+---
+compositionstart focusout keydown keypress keyup mousedown
+---
+compositionupdate focusout keydown keypress keyup mousedown
+---
+abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange resize seeked seeking stalled suspend timeupdate volumechange waiting
+---
+cancel close invalid load scroll toggle
+---
+dangerouslySetInnerHTML
+---
+suppressContentEditableWarning
+---
+suppressHydrationWarning
+---
+dangerouslySetInnerHTML
+---
+suppressContentEditableWarning
+---
+suppressHydrationWarning
+---
+dangerouslySetInnerHTML
+---
+suppressContentEditableWarning
+---
+suppressHydrationWarning
+---
+dangerouslySetInnerHTML
+---
+ react-mount-point-unstable 
+---
+18.3.1-next-f1338f8080-20240426
+---
+18.3.1-next-f1338f8080-20240426
+---
+No window.location.(origin|href) available to create URL for href: 
+---
+A history only accepts one active listener
+---
+must start with the combined path of all its parent routes.
+---
+Index routes must not have child routes. Please remove 
+---
+always follow a `/` in the pattern. To get rid of this warning, 
+---
+rgba(200,200,200, 0.5)
+---
+Unexpected Application Error!
+---
+React Router caught the following error during render
+---
+useViewTransitionState
+---
+(prefers-color-scheme: dark)
+---
+if(e==='light'||e==='dark')d.style.colorScheme=e
+---
+sonner-loading-wrapper
+---
+M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z
+---
+M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z
+---
+M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z
+---
+M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z
+---
+(prefers-color-scheme: dark)
+---
+(prefers-color-scheme: dark)
+---
+(prefers-color-scheme: dark)
+---
+group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg
+---
+group-[.toast]:text-muted-foreground
+---
+group-[.toast]:bg-primary group-[.toast]:text-primary-foreground
+---
+group-[.toast]:bg-muted group-[.toast]:text-muted-foreground
+---
+data-radix-collection-item
+---
+dismissableLayer.update
+---
+dismissableLayer.pointerDownOutside
+---
+dismissableLayer.focusOutside
+---
+DismissableLayerBranch
+---
+Notifications ({hotkey})
+---
+--radix-toast-swipe-move-x
+---
+--radix-toast-swipe-move-y
+---
+--radix-toast-swipe-move-x
+---
+--radix-toast-swipe-move-y
+---
+--radix-toast-swipe-end-x
+---
+--radix-toast-swipe-end-y
+---
+--radix-toast-swipe-move-x
+---
+--radix-toast-swipe-move-y
+---
+--radix-toast-swipe-end-x
+---
+--radix-toast-swipe-end-y
+---
+data-radix-toast-announce-exclude
+---
+data-radix-toast-announce-alt
+---
+m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526
+---
+M3 3v16a2 2 0 0 0 2 2h16
+---
+M14 2v4a2 2 0 0 0 2 2h4
+---
+M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3
+---
+M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8
+---
+M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z
+---
+M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z
+---
+M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12
+---
+M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0
+---
+M7.9 20A9 9 0 1 0 4 16.1L2 22Z
+---
+M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z
+---
+M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z
+---
+M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z
+---
+M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z
+---
+m21.854 2.147-10.94 10.939
+---
+M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z
+---
+M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z
+---
+m17.66 17.66 1.41 1.41
+---
+m6.34 17.66-1.41 1.41
+---
+m19.07 4.93-1.41 1.41
+---
+m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3
+---
+M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2
+---
+M22 21v-2a4 4 0 0 0-3-3.87
+---
+M16 3.13a4 4 0 0 1 0 7.75
+---
+M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1
+---
+M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4
+---
+M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z
+---
+M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z
+---
+gradientColorStopPositions
+---
+text-decoration-style
+---
+text-decoration-thickness
+---
+text-decoration-color
+---
+fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]
+---
+group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full
+---
+border bg-background text-foreground
+---
+destructive group border-destructive bg-destructive text-destructive-foreground
+---
+inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors group-[.destructive]:border-muted/40 hover:bg-secondary group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 group-[.destructive]:focus:ring-destructive disabled:pointer-events-none disabled:opacity-50
+---
+absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity group-hover:opacity-100 group-[.destructive]:text-red-300 hover:text-foreground group-[.destructive]:hover:text-red-50 focus:opacity-100 focus:outline-none focus:ring-2 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600
+---
+text-sm font-semibold
+---
+-webkit-backdrop-filter
+---
+--radix-popper-available-width
+---
+--radix-popper-available-height
+---
+--radix-popper-anchor-width
+---
+--radix-popper-anchor-height
+---
+data-radix-popper-content-wrapper
+---
+--radix-popper-transform-origin
+---
+translateY(50%) rotate(90deg) translateX(-50%)
+---
+translateY(50%) rotate(-90deg) translateX(50%)
+---
+--radix-tooltip-content-transform-origin
+---
+var(--radix-popper-transform-origin)
+---
+--radix-tooltip-content-available-width
+---
+var(--radix-popper-available-width)
+---
+--radix-tooltip-content-available-height
+---
+var(--radix-popper-available-height)
+---
+--radix-tooltip-trigger-width
+---
+var(--radix-popper-anchor-width)
+---
+--radix-tooltip-trigger-height
+---
+var(--radix-popper-anchor-height)
+---
+z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2
+---
+/assets/logo-set-solar-C9hUBIf6.png
+---
+inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0
+---
+bg-primary text-primary-foreground hover:bg-primary/90
+---
+bg-destructive text-destructive-foreground hover:bg-destructive/90
+---
+border border-input bg-background hover:bg-accent hover:text-accent-foreground
+---
+bg-secondary text-secondary-foreground hover:bg-secondary/80
+---
+hover:bg-accent hover:text-accent-foreground
+---
+text-primary underline-offset-4 hover:underline
+---
+gradient-gold text-solar-dark font-bold shadow-solar hover:opacity-90 transition-all duration-300
+---
+border-2 border-solar-gold/40 text-solar-gold hover:bg-solar-gold/10 font-semibold transition-all duration-300
+---
+Cubic bezier arrays must contain four numerical values.
+---
+complex-values-different
+---
+Spring duration must be 10 seconds or less
+---
+spring-duration-limit
+---
+Both input and output ranges must be the same length
+---
+(prefers-reduced-motion)
+---
+LayoutAnimationComplete
+---
+borderBottomLeftRadius
+---
+borderBottomRightRadius
+---
+onBeforeLayoutMeasure
+---
+onMeasureDragConstraints
+---
+@emotion/is-prop-valid
+---
+motionComponentSymbol
+---
+data-framer-portal-id
+---
+If `dragConstraints` is set as a React ref, that ref must be passed to another component's `ref` prop.
+---
+bg-[#0a1628] shadow-lg
+---
+flex items-center justify-between h-20
+---
+Set Solar - Energia Solar
+---
+h-12 md:h-14 w-auto brightness-110
+---
+hidden lg:flex items-center gap-8
+---
+text-sm font-medium text-white/80 hover:text-solar-gold transition-colors
+---
+lg:hidden p-2 rounded-lg text-white hover:text-solar-gold transition-colors
+---
+fixed inset-0 z-40 lg:hidden
+---
+absolute inset-0 bg-black/50
+---
+absolute top-0 right-0 h-full w-72 bg-[#0a1628] shadow-2xl pt-24 px-6
+---
+text-white/80 hover:text-solar-gold font-medium py-2 border-b border-white/10
+---
+/assets/hero-solar-Cl7i9_fK.jpg
+---
+https://wa.me/5562984879184?text=Olá! Gostaria de fazer uma simulação gratuita de energia solar.
+---
+relative min-h-screen flex items-center overflow-hidden
+---
+Painéis solares em telhado moderno
+---
+w-full h-full object-cover
+---
+absolute inset-0 gradient-hero opacity-85
+---
+container relative z-10 py-20 md:py-32
+---
+inline-flex items-center gap-2 rounded-full border border-solar-gold/30 bg-solar-gold/10 px-4 py-2 mb-6
+---
+h-4 w-4 text-solar-gold
+---
+text-sm font-medium text-solar-gold
+---
+Simulação 100% gratuita
+---
+text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary-foreground mb-6
+---
+Pare de jogar dinheiro fora com conta de energia alta.
+---
+Descubra quanto você pode economizar
+---
+text-lg md:text-xl text-primary-foreground/70 mb-10 max-w-2xl leading-relaxed
+---
+Receba uma simulação personalizada, veja em quanto tempo seu sistema se paga e fale agora com um especialista da Set Solar.
+---
+flex flex-col sm:flex-row gap-4
+---
+Quero Minha Simulação Gratuita
+---
+mt-16 grid grid-cols-3 gap-8 max-w-lg
+---
+text-2xl md:text-3xl font-bold text-solar-gold
+---
+text-sm text-primary-foreground/60
+---
+absolute bottom-8 left-1/2 -translate-x-1/2 z-10
+---
+h-6 w-6 text-solar-gold/60
+---
+Conta de energia aumentando todo mês
+---
+As tarifas sobem a cada ano e você paga cada vez mais sem ter nenhum controle.
+---
+Bandeiras tarifárias inesperadas
+---
+Vermelha, amarela… você nunca sabe quanto vai pagar no final do mês.
+---
+Energia desperdiçada sem retorno
+---
+Você paga caro por uma energia que poderia estar gerando no seu próprio telhado.
+---
+Sem previsibilidade financeira
+---
+Sem controle sobre os gastos com energia, seu planejamento financeiro fica comprometido.
+---
+py-20 md:py-28 bg-solar-warm
+---
+text-3xl md:text-4xl font-bold text-foreground mb-4
+---
+ de pagar caro na conta de luz?
+---
+text-muted-foreground text-lg max-w-2xl mx-auto
+---
+Milhares de brasileiros enfrentam os mesmos problemas todos os meses. Veja se você se identifica:
+---
+grid md:grid-cols-2 gap-6 max-w-4xl mx-auto
+---
+flex gap-4 p-6 rounded-xl bg-card shadow-card border border-border/50
+---
+flex-shrink-0 w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center
+---
+h-6 w-6 text-destructive
+---
+font-semibold text-foreground mb-1
+---
+text-sm text-muted-foreground
+---
+Reduza drasticamente sua conta de energia desde o primeiro mês de funcionamento.
+---
+Proteção contra reajustes
+---
+Fique livre dos aumentos tarifários e das bandeiras vermelha e amarela.
+---
+Valorização do imóvel
+---
+Imóveis com energia solar valorizam até 8% no mercado imobiliário.
+---
+Energia limpa e renovável. Faça sua parte pelo meio ambiente.
+---
+Equipamentos com garantia estendida e vida útil superior a 25 anos.
+---
+Retorno do investimento
+---
+O sistema se paga em média entre 3 a 5 anos. Depois, é economia pura.
+---
+py-20 md:py-28 bg-background
+---
+text-3xl md:text-4xl font-bold text-foreground mb-4
+---
+text-muted-foreground text-lg max-w-2xl mx-auto
+---
+Vantagens reais que transformam seu bolso e sua qualidade de vida.
+---
+grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto
+---
+group p-6 rounded-xl border border-border/50 bg-card shadow-card hover:shadow-solar transition-all duration-300
+---
+w-12 h-12 rounded-lg gradient-gold flex items-center justify-center mb-4
+---
+h-6 w-6 text-solar-dark
+---
+font-semibold text-foreground mb-2
+---
+text-sm text-muted-foreground
+---
+Fale com um especialista
+---
+Entre em contato pelo WhatsApp ou formulário e tire todas as suas dúvidas.
+---
+Simulação personalizada
+---
+Analisamos sua conta de energia e projetamos o sistema ideal para você.
+---
+Instalação profissional
+---
+Nossa equipe técnica instala tudo com segurança e rapidez.
+---
+Seu sistema gera energia e sua conta cai drasticamente desde o primeiro mês.
+---
+py-20 md:py-28 gradient-solar
+---
+text-3xl md:text-4xl font-bold text-primary-foreground mb-4
+---
+text-primary-foreground/60 text-lg max-w-2xl mx-auto
+---
+Em 4 passos simples, você sai da conta de luz cara para a economia real.
+---
+grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto
+---
+relative w-16 h-16 mx-auto mb-4
+---
+w-16 h-16 rounded-full bg-solar-gold/20 flex items-center justify-center
+---
+h-7 w-7 text-solar-gold
+---
+absolute -top-2 -right-2 w-7 h-7 rounded-full gradient-gold flex items-center justify-center text-xs font-bold text-solar-dark
+---
+font-semibold text-primary-foreground mb-2
+---
+text-sm text-primary-foreground/60
+---
+/assets/logo-set-solar-light-Bq4WGFmw.png
+---
+py-20 md:py-28 bg-background
+---
+grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto
+---
+text-3xl md:text-4xl font-bold text-foreground mb-4
+---
+text-muted-foreground text-lg mb-8 leading-relaxed
+---
+Somos referência em energia solar com uma equipe altamente qualificada, equipamentos de primeira linha e um compromisso inabalável com a satisfação do cliente. Do projeto à instalação, cuidamos de tudo para você.
+---
+grid grid-cols-2 gap-6
+---
+flex items-center gap-3
+---
+w-10 h-10 rounded-lg bg-solar-green-light flex items-center justify-center
+---
+h-5 w-5 text-solar-green
+---
+font-bold text-foreground text-lg
+---
+text-xs text-muted-foreground
+---
+flex items-center justify-center
+---
+absolute inset-0 bg-gradient-to-br from-solar-gold/20 to-solar-green/20 rounded-3xl blur-2xl
+---
+relative z-10 w-full max-w-md h-auto
+---
+Residencial — Trindade-GO
+---
+Minha conta de luz caiu de R$ 850 para R$ 90! A equipe da Set Solar foi impecável do início ao fim. Recomendo de olhos fechados.
+---
+Comércio — Goiânia-GO
+---
+Investimos em energia solar para nossa loja e em 3 anos o sistema já se pagou. Hoje economizamos mais de R$ 2.000 por mês.
+---
+Agronegócio — Iporá-GO
+---
+A Set Solar entendeu a necessidade da nossa fazenda e entregou um projeto perfeito. Economia real, sem surpresas.
+---
+py-20 md:py-28 bg-solar-warm
+---
+text-3xl md:text-4xl font-bold text-foreground mb-4
+---
+text-muted-foreground text-lg max-w-2xl mx-auto
+---
+Histórias reais de quem já economiza com energia solar.
+---
+grid md:grid-cols-3 gap-6 max-w-5xl mx-auto
+---
+p-6 rounded-xl bg-card shadow-card border border-border/50 relative
+---
+absolute top-4 right-4 h-8 w-8 text-solar-gold/20
+---
+h-4 w-4 fill-solar-gold text-solar-gold
+---
+text-foreground text-sm mb-4 leading-relaxed
+---
+font-semibold text-foreground text-sm
+---
+text-xs text-muted-foreground
+---
+--radix-collapsible-content-height
+---
+--radix-collapsible-content-width
+---
+--radix-accordion-content-height
+---
+var(--radix-collapsible-content-height)
+---
+--radix-accordion-content-width
+---
+var(--radix-collapsible-content-width)
+---
+flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180
+---
+h-4 w-4 shrink-0 transition-transform duration-200
+---
+overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down
+---
+Energia solar é muito cara?
+---
+O investimento se paga em média entre 3 a 5 anos. Com financiamento, a parcela pode ser menor que sua conta de luz atual. Você troca um gasto por um investimento que gera retorno por mais de 25 anos.
+---
+Funciona em dias nublados ou chuvosos?
+---
+Sim! Os painéis captam a radiação solar, não apenas a luz direta. Mesmo em dias nublados, o sistema continua gerando energia. O dimensionamento leva em conta a média anual de radiação da sua região.
+---
+E se eu mudar de imóvel?
+---
+O sistema pode ser transferido para outro imóvel. Além disso, um imóvel com energia solar instalada valoriza significativamente no mercado.
+---
+Preciso de muito espaço no telhado?
+---
+Não necessariamente. Cada projeto é dimensionado de acordo com seu consumo e espaço disponível. Existem soluções para diferentes tipos de telhado e espaços.
+---
+A instalação demora muito?
+---
+A instalação residencial é feita em 1 a 3 dias. Para projetos comerciais e rurais, pode variar de 3 a 7 dias dependendo do porte do sistema.
+---
+Praticamente zero. Os painéis são auto-limpantes com a chuva. Recomendamos apenas uma limpeza preventiva a cada 6-12 meses.
+---
+py-20 md:py-28 bg-background
+---
+text-3xl md:text-4xl font-bold text-foreground mb-4
+---
+text-muted-foreground text-lg max-w-2xl mx-auto
+---
+Respondemos as principais dúvidas para você tomar a melhor decisão.
+---
+rounded-xl border border-border/50 bg-card shadow-card px-6 data-[state=open]:shadow-solar transition-all
+---
+text-left font-semibold text-foreground hover:no-underline
+---
+text-muted-foreground leading-relaxed
+---
+flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm
+---
+[data-radix-focus-guard]
+---
+[data-radix-focus-guard]
+---
+data-radix-focus-guard
+---
+focusScope.autoFocusOnMount
+---
+focusScope.autoFocusOnUnmount
+---
+in not contained inside
+---
+aria-hidden: cannot operate on 
+---
+right-scroll-bar-position
+---
+width-before-scroll-bar
+---
+with-scroll-bars-hidden
+---
+--removed-body-scroll-bar-size
+---
+Sidecar: could not `read` from an `assigned` medium. `read` could be used only with `useMedium`.
+---
+Sidecar: please provide `sideCar` property to import the right car
+---
+Sidecar medium not found
+---
+SelectContent.RemoveScroll
+---
+SelectItemAlignedPosition
+---
+--radix-select-content-transform-origin
+---
+var(--radix-popper-transform-origin)
+---
+--radix-select-content-available-width
+---
+var(--radix-popper-available-width)
+---
+--radix-select-content-available-height
+---
+var(--radix-popper-available-height)
+---
+--radix-select-trigger-width
+---
+var(--radix-popper-anchor-width)
+---
+--radix-select-trigger-height
+---
+var(--radix-popper-anchor-height)
+---
+[data-radix-select-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-select-viewport]::-webkit-scrollbar{display:none}
+---
+data-radix-select-viewport
+---
+A <Select.Item /> must have a value prop that is not an empty string. This is because the Select value can be set to an empty string to clear the selection and show the placeholder.
+---
+SelectScrollDownButton
+---
+flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1
+---
+flex cursor-default items-center justify-center py-1
+---
+flex cursor-default items-center justify-center py-1
+---
+relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2
+---
+data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1
+---
+h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]
+---
+py-1.5 pl-8 pr-2 text-sm font-semibold
+---
+relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:bg-accent focus:text-accent-foreground
+---
+absolute left-2 flex h-3.5 w-3.5 items-center justify-center
+---
+-mx-1 my-1 h-px bg-muted
+---
+https://rfjwiumoxzbupqzjjbny.supabase.co/functions/v1/webhook-lead
+---
+Erro ao enviar lead para o CRM:
+---
+Ocorreu um erro ao enviar. Tente novamente.
+---
+Erro ao conectar com o CRM:
+---
+Ocorreu um erro ao enviar. Tente novamente.
+---
+Simulação enviada com sucesso! Em breve entraremos em contato.
+---
+py-20 md:py-28 gradient-solar relative overflow-hidden
+---
+absolute top-0 left-0 w-96 h-96 bg-solar-gold/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl
+---
+container relative z-10
+---
+grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto
+---
+text-3xl md:text-4xl font-bold text-primary-foreground mb-4
+---
+text-primary-foreground/60 text-lg mb-8 leading-relaxed
+---
+Preencha o formulário e descubra quanto você pode economizar. Sem compromisso, sem pegadinhas.
+---
+Simulação 100% gratuita e sem compromisso
+---
+Resposta em até 24 horas
+---
+Análise personalizada da sua conta de energia
+---
+Projeção completa de economia e retorno
+---
+flex items-center gap-3
+---
+h-5 w-5 text-solar-gold flex-shrink-0
+---
+text-primary-foreground/80 text-sm
+---
+bg-card rounded-2xl p-10 text-center shadow-card
+---
+h-16 w-16 text-solar-green mx-auto mb-4
+---
+text-2xl font-bold text-foreground mb-2
+---
+Simulação solicitada!
+---
+text-muted-foreground
+---
+Em breve um especialista da Set Solar entrará em contato com você.
+---
+bg-card rounded-2xl p-8 shadow-card space-y-4
+---
+text-xl font-bold text-foreground mb-2
+---
+Valor médio da conta de luz (R$)
+---
+w-full text-base py-6
+---
+Solicitar Simulação Gratuita
+---
+text-xs text-muted-foreground text-center
+---
+Seus dados estão seguros. Não enviamos spam.
+---
+https://wa.me/5562984879184?text=Olá! Gostaria de fazer uma simulação gratuita de energia solar.
+---
+py-20 md:py-28 bg-solar-warm
+---
+text-center max-w-3xl mx-auto
+---
+text-3xl md:text-4xl font-bold text-foreground mb-4
+---
+Cada dia sem energia solar é dinheiro perdido.
+---
+Comece a economizar hoje.
+---
+text-muted-foreground text-lg mb-10 max-w-2xl mx-auto
+---
+Fale agora com um especialista da Set Solar e receba sua simulação personalizada em minutos.
+---
+flex flex-col sm:flex-row gap-4 justify-center
+---
+Quero Minha Simulação Gratuita
+---
+container text-center
+---
+flex items-center justify-center mb-4
+---
+Set Solar - Energia Solar
+---
+h-14 md:h-16 w-auto brightness-110
+---
+text-primary-foreground/50 text-sm
+---
+ Set Solar. Todos os direitos reservados.
+---
+https://wa.me/5562984879184?text=Olá! Gostaria de fazer uma simulação gratuita de energia solar.
+---
+fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200
+---
+404 Error: User attempted to access non-existent route:
+---
+flex min-h-screen items-center justify-center bg-muted
+---
+mb-4 text-4xl font-bold
+---
+mb-4 text-xl text-muted-foreground
+---
+text-primary underline hover:text-primary/90

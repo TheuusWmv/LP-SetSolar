@@ -1,0 +1,142 @@
+[
+  {
+    "stage": "publicado antes",
+    "device": "mobile",
+    "url": "https://setsolar.grupokami.com/",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-07T15:11:13.207Z",
+    "scores": {
+      "performance": 55,
+      "accessibility": 89,
+      "best-practices": 96,
+      "seo": 66
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 20325.842999999997,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 20325.842999999997,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 35515.86443191404,
+        "unit": "millisecond"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      }
+    }
+  },
+  {
+    "stage": "publicado antes",
+    "device": "desktop",
+    "url": "https://setsolar.grupokami.com/",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-07T15:13:08.348Z",
+    "scores": {
+      "performance": 93,
+      "accessibility": 95,
+      "best-practices": 100,
+      "seo": 66
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 1224.0195,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 1345.2655,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 1236.3870970513763,
+        "unit": "millisecond"
+      },
+      "total-blocking-time": {
+        "value": 6,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0.007112061393494804,
+        "unit": "unitless"
+      }
+    }
+  },
+  {
+    "stage": "build local otimizado",
+    "device": "mobile",
+    "url": "http://127.0.0.1:4178/",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-07T16:24:09.541Z",
+    "scores": {
+      "performance": 99,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 954.6080999999999,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 2033.6081,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 954.6080999999999,
+        "unit": "millisecond"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      }
+    }
+  },
+  {
+    "stage": "build local otimizado",
+    "device": "desktop",
+    "url": "http://127.0.0.1:4178/",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-07T16:21:33.657Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 262.85990000000004,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 511.71979999999996,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 337.31517018916827,
+        "unit": "millisecond"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      }
+    }
+  }
+]

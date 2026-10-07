@@ -1,69 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  useReducedMotion,
-} from "framer-motion";
-import {
-  ArrowUpRight,
-  CheckCircle2,
-  ShieldCheck,
-  Menu,
-  X,
-} from "lucide-react";
+import { OptimizedImage } from "./OptimizedImage";
+import React from "react";
+import { ArrowUpRight, CheckCircle2, ShieldCheck, Menu, X } from "lucide-react";
 import { templateData } from "../data/templateData";
-import { BlurReveal } from "./ui/blur-reveal";
-import { useMediaQuery } from "../lib/use-media-query";
+import { BlurReveal } from "./ui/static-reveal";
 
 export const SolarFramedHero: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const mobile = useMediaQuery("(max-width: 767px)");
-  useEffect(() => {
-    if (!mobile || !contentRef.current) return;
-    const update = () => {
-      const contentHeight = contentRef.current?.getBoundingClientRect().height ?? 0;
-      containerRef.current?.style.setProperty("--hero-height", Math.max(window.innerHeight, contentHeight + 176) + "px");
-    };
-    const observer = new ResizeObserver(update);
-    observer.observe(contentRef.current);
-    window.addEventListener("resize", update);
-    update();
-    return () => { observer.disconnect(); window.removeEventListener("resize", update); };
-  }, [mobile]);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const shouldReduceMotion = useReducedMotion();
-
-  // Framer Motion scroll tracking
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  // Ultra-responsive spring physics: tracks mousewheel instantly, eliminating sluggish lag and stutter
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 280,
-    damping: 32,
-    mass: 0.1,
-    restDelta: 0.0005,
-  });
-
-  // Dynamic scroll transformations:
-  // Starts with NO border (0px padding, 0px radius - full bleed edge-to-edge).
-  // As user scrolls down, the border smoothly appears (0 to 16px padding, 0 to 32px radius).
-  const framePadding = useTransform(smoothProgress, [0, 0.6], [0, 16]);
-  const borderRadius = useTransform(smoothProgress, [0, 0.6], [0, mobile ? 20 : 32]);
-  const borderOpacity = useTransform(smoothProgress, [0.08, 0.55], [0, 1]);
-
-  // Inverse fillet ears scale up on the GPU synchronously as the border appears
-  const earScale = useTransform(smoothProgress, [0.08, 0.55], [0, 1]);
-  const earOpacity = useTransform(smoothProgress, [0.1, 0.45], [0, 1]);
-
   const { company } = templateData;
   const whatsappUrl = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
-    company.whatsappDefaultMessage
+    company.whatsappDefaultMessage,
   )}`;
 
   const navLinks = [
@@ -76,42 +20,51 @@ export const SolarFramedHero: React.FC = () => {
 
   return (
     // Outer scroll container: 135vh provides a snappy, fluid travel distance without scroll drag
-    <section ref={containerRef} className="solar-hero relative w-full h-[135vh] bg-white">
+    <section className="solar-hero relative w-full h-[135vh] bg-white">
       {/* Sticky viewport frame: remains strictly bounded to 100dvh while the frame expands */}
       <div className="solar-hero-viewport sticky top-0 w-full h-[100dvh] flex items-center justify-center overflow-hidden bg-white">
-        <motion.div
+        <div
           style={{
-            padding: shouldReduceMotion ? 0 : framePadding,
+            padding: "var(--frame-padding, 0px)",
           }}
           className="solar-hero-frame w-full h-full box-border flex items-center justify-center transform-gpu will-change-[padding]"
         >
           {/* Main Hero Canvas (Contracts into a framed card as user scrolls down) */}
-          <motion.div
+          <div
             style={{
-              borderRadius: shouldReduceMotion ? 0 : borderRadius,
+              borderRadius: "var(--frame-radius, 0px)",
             }}
             className="solar-hero-canvas relative w-full h-full overflow-hidden flex flex-col justify-between bg-neutral-950 transform-gpu"
           >
             {/* 1px subtle frame border that fades in as the hero border appears */}
-            <motion.div
+            <div
               style={{
-                opacity: shouldReduceMotion ? 0 : borderOpacity,
+                opacity: "var(--frame-opacity, 0)",
               }}
               className="absolute inset-0 border border-white/30 pointer-events-none z-20 rounded-[inherit]"
             />
 
             {/* Background Image: Casa Moderna com Energia Solar */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none transform-gpu">
-              <img
-                src="/images/projetos/hero-set-solar.jpg"
-                sizes="100vw"
-                // @ts-ignore
-                fetchpriority="high"
-                alt="Painéis solares fotovoltaicos instalados em telhado residencial em Goiás"
-                decoding="async"
-                loading="eager"
-                className="w-full h-full object-cover object-[center_35%] lg:object-[center_30%] scale-[1.02] transform-gpu pointer-events-none select-none"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcSet="/images/hero-mobile-480.webp 480w, /images/hero-mobile-768.webp 768w"
+                  sizes="100vw"
+                  width="480"
+                  height="912"
+                />
+                <OptimizedImage
+                  src="/images/projetos/hero-set-solar.jpg"
+                  sizes="100vw"
+                  // @ts-ignore
+                  fetchpriority="high"
+                  alt="Painéis solares fotovoltaicos instalados em telhado residencial em Goiás"
+                  decoding="async"
+                  loading="eager"
+                  className="w-full h-full object-cover object-[center_35%] lg:object-[center_30%] scale-[1.02] transform-gpu pointer-events-none select-none"
+                />
+              </picture>
 
               {/* Directional Vignette & Legibility Gradients */}
               {/* Left-to-right gradient: Protects typography contrast while keeping house and solar roof clear */}
@@ -132,15 +85,18 @@ export const SolarFramedHero: React.FC = () => {
                 {/* Notch Body in Solid Pure White: Slim height (py-2), delicate border & soft shadow */}
                 <div className="relative bg-white border-b border-slate-200/90 rounded-b-[1.5rem] md:rounded-b-[1.75rem] px-5 md:px-8 py-0 md:py-2.5 shadow-[0_16px_36px_rgba(0,0,0,0.35),0_4px_12px_rgba(0,0,0,0.18)] flex items-center justify-between text-neutral-900">
                   {/* Left Ear / Inverse Fillet Wing (GPU scale & fade) */}
-                  <motion.div
+                  <div
                     style={{
-                      scale: earScale,
-                      opacity: earOpacity,
+                      scale: "var(--ear-scale, 0)",
+                      opacity: "var(--ear-opacity, 0)",
                       transformOrigin: "top right",
                     }}
                     className="absolute top-0 -left-[12px] w-[12px] h-[12px] md:-left-[18px] md:w-[18px] md:h-[18px] pointer-events-none overflow-hidden transform-gpu"
                   >
-                    <svg viewBox="0 0 18 18" className="w-full h-full text-white fill-current">
+                    <svg
+                      viewBox="0 0 18 18"
+                      className="w-full h-full text-white fill-current"
+                    >
                       <path d="M0 0 H18 V18 C18 8.059 9.941 0 0 0 Z" />
                       <path
                         d="M0 0 C9.941 0 18 8.059 18 18"
@@ -149,18 +105,21 @@ export const SolarFramedHero: React.FC = () => {
                         strokeWidth="1"
                       />
                     </svg>
-                  </motion.div>
+                  </div>
 
                   {/* Right Ear / Inverse Fillet Wing (GPU scale & fade) */}
-                  <motion.div
+                  <div
                     style={{
-                      scale: earScale,
-                      opacity: earOpacity,
+                      scale: "var(--ear-scale, 0)",
+                      opacity: "var(--ear-opacity, 0)",
                       transformOrigin: "top left",
                     }}
                     className="absolute top-0 -right-[12px] w-[12px] h-[12px] md:-right-[18px] md:w-[18px] md:h-[18px] pointer-events-none overflow-hidden transform-gpu"
                   >
-                    <svg viewBox="0 0 18 18" className="w-full h-full text-white fill-current">
+                    <svg
+                      viewBox="0 0 18 18"
+                      className="w-full h-full text-white fill-current"
+                    >
                       <path d="M18 0 H0 V18 C0 8.059 8.059 0 18 0 Z" />
                       <path
                         d="M18 0 C8.059 0 0 8.059 0 18"
@@ -169,7 +128,7 @@ export const SolarFramedHero: React.FC = () => {
                         strokeWidth="1"
                       />
                     </svg>
-                  </motion.div>
+                  </div>
 
                   {/* Brand Logo in Notch */}
                   <a
@@ -177,7 +136,11 @@ export const SolarFramedHero: React.FC = () => {
                     className="flex items-center group transition-transform active:scale-[0.97] shrink-0"
                     aria-label="Set Solar - Início"
                   >
-                    <img src="/logo-setsolar.png" alt="Set Solar" className="h-8 md:h-9 w-auto object-contain" />
+                    <OptimizedImage
+                      src="/logo-setsolar.png"
+                      alt="Set Solar"
+                      className="h-8 md:h-9 w-auto object-contain"
+                    />
                   </a>
 
                   {/* Center Desktop Navigation Links (Single line, spacious, elegant) */}
@@ -198,7 +161,9 @@ export const SolarFramedHero: React.FC = () => {
                     <a
                       href={company.simulatorUrl || whatsappUrl}
                       target={company.simulatorUrl ? undefined : "_blank"}
-                      rel={company.simulatorUrl ? undefined : "noopener noreferrer"}
+                      rel={
+                        company.simulatorUrl ? undefined : "noopener noreferrer"
+                      }
                       className="whitespace-nowrap inline-flex items-center gap-1.5 px-4 md:px-5 py-1.5 rounded-full bg-[var(--brand-accent)] hover:bg-[var(--brand-accent-hover)] text-[var(--brand-accent-text)] font-bold text-xs tracking-tight transition-[background-color,transform,box-shadow] duration-160 ease-out-strong shadow-sm hover:scale-[1.02] active:scale-[0.97]"
                     >
                       <span>Simular Economia</span>
@@ -208,24 +173,21 @@ export const SolarFramedHero: React.FC = () => {
 
                   {/* Mobile Menu Toggle Button */}
                   <button
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    aria-expanded={mobileMenuOpen}
+                    aria-expanded={false}
                     aria-controls="hero-mobile-menu"
                     className="md:hidden min-w-11 min-h-11 flex items-center justify-center p-1 rounded-full text-neutral-900 hover:bg-slate-100 transition-colors duration-160"
-                    aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+                    aria-label="Abrir menu"
                   >
-                    {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                    <Menu className="menu-open w-5 h-5" />
+                    <X className="menu-close w-5 h-5" />
                   </button>
                 </div>
 
                 {/* Mobile Dropdown Drawer below the white notch with Fluid GPU Scale & Opacity */}
-                {mobileMenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.96, y: -6 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.96, y: -6 }}
-                    transition={{ duration: 0.18, ease: [0.23, 1, 0.32, 1] }}
+                {
+                  <div
                     id="hero-mobile-menu"
+                    hidden
                     style={{ transformOrigin: "top center" }}
                     className="md:hidden mt-2 bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-3xl p-5 shadow-2xl space-y-3"
                   >
@@ -234,7 +196,6 @@ export const SolarFramedHero: React.FC = () => {
                         <a
                           key={link.href}
                           href={link.href}
-                          onClick={() => setMobileMenuOpen(false)}
                           className="px-4 py-2.5 text-sm font-semibold text-slate-700 hover:text-neutral-950 hover:bg-slate-100 rounded-xl transition-colors duration-160"
                         >
                           {link.label}
@@ -246,16 +207,19 @@ export const SolarFramedHero: React.FC = () => {
                       <a
                         href={company.simulatorUrl || whatsappUrl}
                         target={company.simulatorUrl ? undefined : "_blank"}
-                        rel={company.simulatorUrl ? undefined : "noopener noreferrer"}
-                        onClick={() => setMobileMenuOpen(false)}
+                        rel={
+                          company.simulatorUrl
+                            ? undefined
+                            : "noopener noreferrer"
+                        }
                         className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[var(--brand-accent)] text-[var(--brand-accent-text)] font-bold text-xs shadow-md active:scale-[0.97] transition-transform duration-160 ease-out-strong"
                       >
                         <span>Fazer Simulação Gratuita</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
                       </a>
                     </div>
-                  </motion.div>
-                )}
+                  </div>
+                }
               </div>
             </div>
 
@@ -263,15 +227,28 @@ export const SolarFramedHero: React.FC = () => {
             {/* HERO CONTENT: ANCHORED IN LOWER-LEFT CORNER (Clean left alignment) */}
             {/* ========================================================================= */}
             <div className="relative z-10 w-full flex-1 flex flex-col justify-end px-5 md:px-10 lg:px-14 xl:px-16 pb-8 md:pb-12 lg:pb-16 pt-20 md:pt-24">
-              <div ref={contentRef} className="max-w-2xl lg:max-w-3xl text-left">
+              <div
+                data-hero-content
+                className="max-w-2xl lg:max-w-3xl text-left"
+              >
                 {/* Pill Eyebrow Tag */}
-                <BlurReveal className="hidden md:block" delay={0.08} yOffset={14} blur="6px">
+                <BlurReveal
+                  className="hidden md:block"
+                  delay={0.08}
+                  yOffset={14}
+                  blur="6px"
+                >
                   <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 md:py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[11px] md:text-xs font-medium tracking-wide mb-3 md:mb-5 shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)] animate-pulse-subtle" />
                     <span className="md:hidden">Set Solar</span>
-                    <span className="hidden md:inline">Simulação 100% Gratuita • Mais de 600 Projetos Instalados em Goiás</span>
+                    <span className="hidden md:inline">
+                      Simulação 100% Gratuita • Mais de 600 Projetos Instalados
+                      em Goiás
+                    </span>
                     <span className="hidden md:inline text-white/40">•</span>
-                    <span className="hidden md:inline text-[var(--brand-accent)] font-semibold">Até 95% de Economia</span>
+                    <span className="hidden md:inline text-[var(--brand-accent)] font-semibold">
+                      Até 95% de Economia
+                    </span>
                   </div>
                 </BlurReveal>
 
@@ -280,16 +257,24 @@ export const SolarFramedHero: React.FC = () => {
                   <span className="text-[2.15rem] leading-[1.08] md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-tight mb-3 md:mb-5 block">
                     <span className="md:hidden font-extrabold">
                       Economize até 95% na sua conta de luz em{" "}
-                      <span className="text-[var(--brand-accent)]">Trindade e Goiás.</span>
+                      <span className="text-[var(--brand-accent)]">
+                        Trindade e Goiás.
+                      </span>
                     </span>
                     <span className="hidden md:inline">
                       <span className="italic font-serif font-normal text-white/95 pr-2 md:pr-3">
                         Economize até
                       </span>
-                      <span className="font-extrabold text-[var(--brand-accent)]">95%</span>
+                      <span className="font-extrabold text-[var(--brand-accent)]">
+                        95%
+                      </span>
                       <br />
-                      <span className="font-extrabold text-white">na sua conta de luz em</span>{" "}
-                      <span className="font-extrabold text-white">Trindade e Goiás.</span>
+                      <span className="font-extrabold text-white">
+                        na sua conta de luz em
+                      </span>{" "}
+                      <span className="font-extrabold text-white">
+                        Trindade e Goiás.
+                      </span>
                     </span>
                   </span>
                 </BlurReveal>
@@ -298,10 +283,16 @@ export const SolarFramedHero: React.FC = () => {
                 <BlurReveal delay={0.24} yOffset={20} blur="8px">
                   <p className="text-sm md:text-base lg:text-lg text-slate-200/90 font-normal leading-relaxed mb-6 md:mb-8 max-w-xl text-pretty">
                     <span className="md:hidden">
-                      Projetos de alta performance para residências, empresas e agronegócio em Trindade, Goiânia e Goiás. Parcelamento em até 60x.
+                      Projetos de alta performance para residências, empresas e
+                      agronegócio em Trindade, Goiânia e Goiás. Parcelamento em
+                      até 60x.
                     </span>
                     <span className="hidden md:inline">
-                      Projetos de alta performance para residências, empresas e agronegócio em Trindade, Goiânia e em todo o estado de Goiás. Do dimensionamento à homologação na Equatorial Goiás, nós cuidamos de tudo com engenharia de ponta e parcelamento em até 60x sem entrada.
+                      Projetos de alta performance para residências, empresas e
+                      agronegócio em Trindade, Goiânia e em todo o estado de
+                      Goiás. Do dimensionamento à homologação na Equatorial
+                      Goiás, nós cuidamos de tudo com engenharia de ponta e
+                      parcelamento em até 60x sem entrada.
                     </span>
                   </p>
                 </BlurReveal>
@@ -312,11 +303,15 @@ export const SolarFramedHero: React.FC = () => {
                     <a
                       href={company.simulatorUrl || whatsappUrl}
                       target={company.simulatorUrl ? undefined : "_blank"}
-                      rel={company.simulatorUrl ? undefined : "noopener noreferrer"}
+                      rel={
+                        company.simulatorUrl ? undefined : "noopener noreferrer"
+                      }
                       className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3.5 md:py-3 rounded-full bg-[var(--brand-accent)] hover:bg-[var(--brand-accent-hover)] text-[var(--brand-accent-text)] font-bold text-sm md:text-sm tracking-tight transition-[background-color,transform,box-shadow] duration-160 ease-out-strong shadow-xl shadow-black/25 active:scale-[0.97]"
                     >
                       <span className="md:hidden">Simular minha economia</span>
-                      <span className="hidden md:inline">Faça uma simulação gratuita</span>
+                      <span className="hidden md:inline">
+                        Faça uma simulação gratuita
+                      </span>
                       <ArrowUpRight className="w-4 h-4" />
                     </a>
 
@@ -325,13 +320,20 @@ export const SolarFramedHero: React.FC = () => {
                       className="inline-flex items-center justify-center px-6 md:px-7 py-3 md:py-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/25 font-semibold text-sm md:text-sm transition-[background-color,border-color,transform] duration-160 ease-out-strong hover:border-white/40 active:scale-[0.97] shadow-sm text-center"
                     >
                       <span className="md:hidden">Conheça as soluções</span>
-                      <span className="hidden md:inline">Conheça as soluções</span>
+                      <span className="hidden md:inline">
+                        Conheça as soluções
+                      </span>
                     </a>
                   </div>
                 </BlurReveal>
 
                 {/* Trust Features Bar & Mobile Scroll Indicator */}
-                <BlurReveal className="hidden md:block" delay={0.38} yOffset={14} blur="6px">
+                <BlurReveal
+                  className="hidden md:block"
+                  delay={0.38}
+                  yOffset={14}
+                  blur="6px"
+                >
                   <div className="pt-1">
                     {/* Mobile bottom indicator */}
                     <div className="md:hidden flex items-center justify-between text-xs text-white/70 font-medium">
@@ -377,8 +379,8 @@ export const SolarFramedHero: React.FC = () => {
                 {company.shortName}
               </span>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

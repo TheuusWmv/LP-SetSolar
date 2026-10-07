@@ -6,6 +6,7 @@ import { HowItWorks } from "./components/HowItWorks";
 import { Services } from "./components/Services";
 import { Testimonials } from "./components/Testimonials";
 import { FAQ } from "./components/FAQ";
+import { SolarGuide } from "./components/SolarGuide";
 import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 
@@ -27,25 +28,36 @@ export const App: React.FC = () => {
         <SolarLogoMarquee />
 
         {/* 3. Sobre Nós (Bento Grid) */}
-        <AboutUs />
+        <div data-island="AboutUs">
+          <AboutUs />
+        </div>
 
         {/* 4. Como Funciona (Timeline) */}
-        <HowItWorks />
+        <div data-island="HowItWorks">
+          <HowItWorks />
+        </div>
 
         {/* 5. Nossas Soluções / Serviços (Modern Carousel/Grid) */}
-        <Services />
+        <div data-island="Services">
+          <Services />
+        </div>
 
-        <Testimonials />
+        <div data-island="Testimonials">
+          <Testimonials />
+        </div>
 
         {/* Perguntas Frequentes (FAQ) */}
         <FAQ />
+        <SolarGuide />
 
         {/* 8. CTA (High Impact Simulation Banner) */}
         <CTA />
       </main>
 
       {/* 9. Footer (Institutional Multi-Column Navigation) */}
-      <Footer />
+      <div data-island="Footer">
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,215 @@
+{
+  "/images/avatar-carlos.jpg": {
+    "width": 240,
+    "height": 360,
+    "src": "/images/avatar-carlos-240.webp",
+    "srcSet": "/images/avatar-carlos-240.webp 240w"
+  },
+  "/images/avatar-fabiana.jpg": {
+    "width": 240,
+    "height": 360,
+    "src": "/images/avatar-fabiana-240.webp",
+    "srcSet": "/images/avatar-fabiana-240.webp 240w"
+  },
+  "/images/avatar-guilherme.jpg": {
+    "width": 240,
+    "height": 360,
+    "src": "/images/avatar-guilherme-240.webp",
+    "srcSet": "/images/avatar-guilherme-240.webp 240w"
+  },
+  "/images/avatar-leticia.jpg": {
+    "width": 240,
+    "height": 360,
+    "src": "/images/avatar-leticia-240.webp",
+    "srcSet": "/images/avatar-leticia-240.webp 240w"
+  },
+  "/images/avatar-mariana.jpg": {
+    "width": 240,
+    "height": 300,
+    "src": "/images/avatar-mariana-240.webp",
+    "srcSet": "/images/avatar-mariana-240.webp 240w"
+  },
+  "/images/avatar-roberto.jpg": {
+    "width": 240,
+    "height": 160,
+    "src": "/images/avatar-roberto-240.webp",
+    "srcSet": "/images/avatar-roberto-240.webp 240w"
+  },
+  "/images/projetos/clinica-dr-paulo.png": {
+    "width": 1363,
+    "height": 1258,
+    "src": "/images/projetos/clinica-dr-paulo-1280.webp",
+    "srcSet": "/images/projetos/clinica-dr-paulo-480.webp 480w, /images/projetos/clinica-dr-paulo-1280.webp 1280w"
+  },
+  "/images/projetos/eletromobilidade.png": {
+    "width": 1370,
+    "height": 1920,
+    "src": "/images/projetos/eletromobilidade-1280.webp",
+    "srcSet": "/images/projetos/eletromobilidade-480.webp 480w, /images/projetos/eletromobilidade-1280.webp 1280w"
+  },
+  "/images/projetos/escola-dinamica.png": {
+    "width": 687,
+    "height": 633,
+    "src": "/images/projetos/escola-dinamica-687.webp",
+    "srcSet": "/images/projetos/escola-dinamica-480.webp 480w, /images/projetos/escola-dinamica-687.webp 687w"
+  },
+  "/images/projetos/hero-set-solar.jpg": {
+    "width": 1920,
+    "height": 1080,
+    "src": "/images/projetos/hero-set-solar-1280.webp",
+    "srcSet": "/images/projetos/hero-set-solar-480.webp 480w, /images/projetos/hero-set-solar-1280.webp 1280w"
+  },
+  "/images/projetos/posto-mak.jpg": {
+    "width": 806,
+    "height": 742,
+    "src": "/images/projetos/posto-mak-806.webp",
+    "srcSet": "/images/projetos/posto-mak-480.webp 480w, /images/projetos/posto-mak-806.webp 806w"
+  },
+  "/images/projetos/residencial-le-jardam.png": {
+    "width": 1363,
+    "height": 1258,
+    "src": "/images/projetos/residencial-le-jardam-1280.webp",
+    "srcSet": "/images/projetos/residencial-le-jardam-480.webp 480w, /images/projetos/residencial-le-jardam-1280.webp 1280w"
+  },
+  "/images/projetos/rural-agro.jpg": {
+    "width": 768,
+    "height": 1024,
+    "src": "/images/projetos/rural-agro-768.webp",
+    "srcSet": "/images/projetos/rural-agro-480.webp 480w, /images/projetos/rural-agro-768.webp 768w"
+  },
+  "/images/projetos/territorio-da-carne.png": {
+    "width": 1028,
+    "height": 948,
+    "src": "/images/projetos/territorio-da-carne-1028.webp",
+    "srcSet": "/images/projetos/territorio-da-carne-480.webp 480w, /images/projetos/territorio-da-carne-1028.webp 1028w"
+  },
+  "/images/projetos/usinas-solo.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "src": "/images/projetos/usinas-solo-1024.webp",
+    "srcSet": "/images/projetos/usinas-solo-480.webp 480w, /images/projetos/usinas-solo-1024.webp 1024w"
+  },
+  "/images/solar-baterias.jpg": {
+    "width": 1000,
+    "height": 665,
+    "src": "/images/solar-baterias-1000.webp",
+    "srcSet": "/images/solar-baterias-480.webp 480w, /images/solar-baterias-1000.webp 1000w"
+  },
+  "/images/solar-comercial.jpg": {
+    "width": 1000,
+    "height": 563,
+    "src": "/images/solar-comercial-1000.webp",
+    "srcSet": "/images/solar-comercial-480.webp 480w, /images/solar-comercial-1000.webp 1000w"
+  },
+  "/images/solar-industrial.jpg": {
+    "width": 1000,
+    "height": 667,
+    "src": "/images/solar-industrial-1000.webp",
+    "srcSet": "/images/solar-industrial-480.webp 480w, /images/solar-industrial-1000.webp 1000w"
+  },
+  "/images/solar-residencial.jpg": {
+    "width": 1000,
+    "height": 666,
+    "src": "/images/solar-residencial-1000.webp",
+    "srcSet": "/images/solar-residencial-480.webp 480w, /images/solar-residencial-1000.webp 1000w"
+  },
+  "/images/solar-rural.jpg": {
+    "width": 1000,
+    "height": 665,
+    "src": "/images/solar-rural-1000.webp",
+    "srcSet": "/images/solar-rural-480.webp 480w, /images/solar-rural-1000.webp 1000w"
+  },
+  "/logo-clarotec.png": {
+    "width": 1400,
+    "height": 349,
+    "src": "/logo-clarotec-1280.webp",
+    "srcSet": "/logo-clarotec-480.webp 480w, /logo-clarotec-1280.webp 1280w"
+  },
+  "/logo-clarotec.svg": {
+    "src": "/logo-clarotec.svg",
+    "width": 1381,
+    "height": 419
+  },
+  "/logo-setsolar-light.png": {
+    "width": 1920,
+    "height": 673,
+    "src": "/logo-setsolar-light-1280.webp",
+    "srcSet": "/logo-setsolar-light-480.webp 480w, /logo-setsolar-light-1280.webp 1280w"
+  },
+  "/logo-setsolar.png": {
+    "width": 1920,
+    "height": 673,
+    "src": "/logo-setsolar-1280.webp",
+    "srcSet": "/logo-setsolar-480.webp 480w, /logo-setsolar-1280.webp 1280w"
+  },
+  "/logo-worldplace.svg": {
+    "src": "/logo-worldplace.svg",
+    "width": 1920,
+    "height": 673
+  },
+  "/logos/byd.svg": {
+    "src": "/logos/byd.svg",
+    "width": 843,
+    "height": 510
+  },
+  "/logos/canadian-solar.png": {
+    "width": 202,
+    "height": 80,
+    "src": "/logos/canadian-solar-202.webp",
+    "srcSet": "/logos/canadian-solar-202.webp 202w"
+  },
+  "/logos/deye.png": {
+    "width": 340,
+    "height": 80,
+    "src": "/logos/deye-340.webp",
+    "srcSet": "/logos/deye-340.webp 340w"
+  },
+  "/logos/equatorial-goias.svg": {
+    "src": "/logos/equatorial-goias.svg",
+    "width": 280,
+    "height": 60
+  },
+  "/logos/fronius.png": {
+    "width": 286,
+    "height": 80,
+    "src": "/logos/fronius-286.webp",
+    "srcSet": "/logos/fronius-286.webp 286w"
+  },
+  "/logos/fronius.svg": {
+    "src": "/logos/fronius.svg",
+    "width": 260,
+    "height": 75
+  },
+  "/logos/growatt.png": {
+    "width": 324,
+    "height": 80,
+    "src": "/logos/growatt-324.webp",
+    "srcSet": "/logos/growatt-324.webp 324w"
+  },
+  "/logos/huawei.svg": {
+    "src": "/logos/huawei.svg",
+    "width": 24,
+    "height": 24
+  },
+  "/logos/jinko-solar.png": {
+    "width": 240,
+    "height": 80,
+    "src": "/logos/jinko-solar-240.webp",
+    "srcSet": "/logos/jinko-solar-240.webp 240w"
+  },
+  "/logos/sungrow.svg": {
+    "src": "/logos/sungrow.svg",
+    "width": 1552,
+    "height": 340
+  },
+  "/logos/weg.svg": {
+    "src": "/logos/weg.svg",
+    "width": 979,
+    "height": 687
+  },
+  "/marca-worldplace.svg": {
+    "src": "/marca-worldplace.svg",
+    "width": 560,
+    "height": 419
+  }
+}

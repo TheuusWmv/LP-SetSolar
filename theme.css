@@ -12,30 +12,30 @@
   /* =========================================================================
    * 1. PALETA DE CORES (COLOR TOKENS)
    * ========================================================================= */
-  
+
   /* Set Solar (Paleta Institucional Oficial) */
-  --solar-lime: #D4942A; /* Âmbar Solar Dourado - Destaque de Alta Conversão */
-  --solar-lime-hover: #B47218;
-  --solar-lime-active: #92560D;
-  --solar-lime-soft: #FEF9EE;
+  --solar-lime: #d4942a; /* Âmbar Solar Dourado - Destaque de Alta Conversão */
+  --solar-lime-hover: #b47218;
+  --solar-lime-active: #92560d;
+  --solar-lime-soft: #fef9ee;
   --solar-lime-border: rgba(212, 148, 42, 0.35);
-  --solar-lime-glow: rgba(212, 148, 42, 0.40);
-  --solar-lime-text: #1B3A5C;
+  --solar-lime-glow: rgba(212, 148, 42, 0.4);
+  --solar-lime-text: #1b3a5c;
 
   /* Cores Institucionais Set Solar */
-  --solar-yellow-primary: #F59E0B;
-  --solar-yellow-gold: #D4942A;
-  --solar-orange-primary: #D4942A;
-  --solar-orange-hover: #B47218;
-  --solar-blue-primary: #1B3A5C; /* Azul Petróleo Oficial Set Solar */
-  --solar-blue-secondary: #2B5885;
-  --solar-blue-dark: #0D1E30;
+  --solar-yellow-primary: #f59e0b;
+  --solar-yellow-gold: #d4942a;
+  --solar-orange-primary: #d4942a;
+  --solar-orange-hover: #b47218;
+  --solar-blue-primary: #1b3a5c; /* Azul Petróleo Oficial Set Solar */
+  --solar-blue-secondary: #2b5885;
+  --solar-blue-dark: #0d1e30;
   --solar-green-eco: #519048;
   --solar-green-light: #74b852;
 
   /* Escala de Cinza & Texto */
-  --solar-neutral-950: #0B1827; /* Fundo hero escuro / base institucional */
-  --solar-neutral-900: #1B3A5C; /* Azul Petróleo Oficial Set Solar / títulos */
+  --solar-neutral-950: #0b1827; /* Fundo hero escuro / base institucional */
+  --solar-neutral-900: #1b3a5c; /* Azul Petróleo Oficial Set Solar / títulos */
   --solar-neutral-800: #244164; /* Títulos secundários, texto de alta ênfase */
   --solar-slate-700: #334155; /* Labels de formulário, badges neutros */
   --solar-slate-600: #475569; /* Parágrafos principais, textos explicativos */
@@ -44,16 +44,16 @@
   --solar-slate-300: #cbd5e1; /* Bordas de inputs e dividers */
   --solar-slate-200: #e2e8f0; /* Bordas de cards, trilhas de progresso */
   --solar-slate-100: #f1f5f9; /* Fundos sutis, hover de cards, pills */
-  --solar-slate-50:  #f8fafc; /* Superfície de fundo secundária, tabelas */
-  --solar-white:     #ffffff; /* Fundo base principal, cards brancos */
+  --solar-slate-50: #f8fafc; /* Superfície de fundo secundária, tabelas */
+  --solar-white: #ffffff; /* Fundo base principal, cards brancos */
 
   /* Tons Atmosféricos Solares */
-  --solar-deep-navy: #0D1E30;
-  --solar-midnight:  #0B1827;
+  --solar-deep-navy: #0d1e30;
+  --solar-midnight: #0b1827;
 
   /* Gradientes Set Solar */
-  --solar-gradient-cta: linear-gradient(135deg, #F59E0B 0%, #D4942A 100%);
-  --solar-gradient-hero: linear-gradient(115deg, #070F18 0%, #0D1E30 80%);
+  --solar-gradient-cta: linear-gradient(135deg, #f59e0b 0%, #d4942a 100%);
+  --solar-gradient-hero: linear-gradient(115deg, #070f18 0%, #0d1e30 80%);
 
   /* Vidro & Glassmorphism */
   --solar-glass-bg-light: rgba(255, 255, 255, 0.75);
@@ -70,67 +70,70 @@
   --solar-error-soft: #fee2e2;
 
   /* Aliases para compatibilidade de temas */
-  --brand-accent: #D4942A;
-  --brand-accent-hover: #B47218;
-  --brand-accent-text: #FFFFFF;
-  --brand-accent-soft: #FEF9EE;
+  --brand-accent: #d4942a;
+  --brand-accent-hover: #b47218;
+  --brand-accent-text: #0b1827;
+  --brand-accent-soft: #fef9ee;
 
   /* =========================================================================
    * 2. TIPOGRAFIA (TYPOGRAPHY TOKENS)
    * ========================================================================= */
-  --solar-font-sans: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --solar-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --solar-font-sans:
+    "Plus Jakarta Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --solar-font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* Tracking (Letter-spacing) */
   --solar-tracking-tighter: -0.04em;
-  --solar-tracking-tight:   -0.025em;
-  --solar-tracking-normal:  0em;
-  --solar-tracking-wide:    0.025em;
-  --solar-tracking-wider:   0.06em;
+  --solar-tracking-tight: -0.025em;
+  --solar-tracking-normal: 0em;
+  --solar-tracking-wide: 0.025em;
+  --solar-tracking-wider: 0.06em;
 
   /* Line Heights */
-  --solar-leading-none:    1;
-  --solar-leading-tight:   1.15;
-  --solar-leading-snug:    1.3;
-  --solar-leading-normal:  1.5;
+  --solar-leading-none: 1;
+  --solar-leading-tight: 1.15;
+  --solar-leading-snug: 1.3;
+  --solar-leading-normal: 1.5;
   --solar-leading-relaxed: 1.65;
 
   /* =========================================================================
    * 3. RAIO DE ARREDONDAMENTO (BORDER RADIUS)
    * ========================================================================= */
-  --solar-radius-xs:   6px;
-  --solar-radius-sm:   8px;
-  --solar-radius-md:   12px;
-  --solar-radius-lg:   16px;
-  --solar-radius-xl:   20px;
-  --solar-radius-2xl:  24px;
-  --solar-radius-3xl:  32px;
+  --solar-radius-xs: 6px;
+  --solar-radius-sm: 8px;
+  --solar-radius-md: 12px;
+  --solar-radius-lg: 16px;
+  --solar-radius-xl: 20px;
+  --solar-radius-2xl: 24px;
+  --solar-radius-3xl: 32px;
   --solar-radius-full: 9999px;
 
   /* =========================================================================
    * 4. ELEVAÇÃO & SOMBRAS (SHADOW TOKENS)
    * ========================================================================= */
-  --solar-shadow-xs:        0 1px 2px 0 rgba(15, 23, 42, 0.05);
-  --solar-shadow-sm:        0 2px 8px -2px rgba(15, 23, 42, 0.06);
-  --solar-shadow-md:        0 8px 24px -4px rgba(15, 23, 42, 0.08);
-  --solar-shadow-lg:        0 16px 36px -6px rgba(15, 23, 42, 0.1);
+  --solar-shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --solar-shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.06);
+  --solar-shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+  --solar-shadow-lg: 0 16px 36px -6px rgba(15, 23, 42, 0.1);
   --solar-shadow-diffusion: 0 24px 48px -18px rgba(15, 23, 42, 0.06);
-  --solar-shadow-card:      0 12px 30px -4px rgba(15, 23, 42, 0.08);
-  --solar-shadow-glow:      0 0 30px -5px var(--solar-lime-glow);
-  --solar-shadow-notch:     0 20px 40px -15px rgba(0, 0, 0, 0.25);
+  --solar-shadow-card: 0 12px 30px -4px rgba(15, 23, 42, 0.08);
+  --solar-shadow-glow: 0 0 30px -5px var(--solar-lime-glow);
+  --solar-shadow-notch: 0 20px 40px -15px rgba(0, 0, 0, 0.25);
 
   /* =========================================================================
    * 5. TRANSIÇÕES & FÍSICA DE MOVIMENTO (MOTION TOKENS)
    * ========================================================================= */
-  --solar-ease-out:        cubic-bezier(0.23, 1, 0.32, 1);
-  --solar-ease-in-out:     cubic-bezier(0.77, 0, 0.175, 1);
-  --solar-ease-spring:     cubic-bezier(0.32, 0.72, 0, 1);
-  --solar-ease-overshoot:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --solar-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --solar-ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --solar-ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  --solar-ease-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  --solar-duration-fast:   150ms;
+  --solar-duration-fast: 150ms;
   --solar-duration-normal: 240ms;
   --solar-duration-smooth: 350ms;
-  --solar-duration-slow:   500ms;
+  --solar-duration-slow: 500ms;
 }
 
 /* =============================================================================
@@ -146,9 +149,17 @@
   height: 100vh;
   pointer-events: none;
   z-index: 0;
-  background: 
-    radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--solar-lime) 12%, transparent) 0%, transparent 45%),
-    radial-gradient(circle at 10% 80%, rgba(15, 23, 42, 0.02) 0%, transparent 50%),
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      color-mix(in srgb, var(--solar-lime) 12%, transparent) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(15, 23, 42, 0.02) 0%,
+      transparent 50%
+    ),
     radial-gradient(circle at 50% 50%, #ffffff 0%, var(--solar-slate-50) 100%);
 }
 
@@ -193,7 +204,7 @@
   box-shadow: var(--solar-shadow-xs);
   cursor: pointer;
   user-select: none;
-  transition: 
+  transition:
     background-color var(--solar-duration-fast) var(--solar-ease-out),
     transform var(--solar-duration-fast) var(--solar-ease-out),
     box-shadow var(--solar-duration-fast) var(--solar-ease-out);
@@ -234,7 +245,7 @@
   border: 1px solid var(--solar-slate-200);
   cursor: pointer;
   user-select: none;
-  transition: 
+  transition:
     background-color var(--solar-duration-fast) var(--solar-ease-out),
     border-color var(--solar-duration-fast) var(--solar-ease-out),
     color var(--solar-duration-fast) var(--solar-ease-out);
@@ -310,7 +321,7 @@
   border: 1px solid var(--solar-slate-200);
   border-radius: var(--solar-radius-2xl);
   box-shadow: var(--solar-shadow-xs);
-  transition: 
+  transition:
     border-color var(--solar-duration-normal) var(--solar-ease-out),
     box-shadow var(--solar-duration-normal) var(--solar-ease-out),
     transform var(--solar-duration-normal) var(--solar-ease-out);
@@ -436,7 +447,9 @@
   border: 3px solid var(--solar-lime);
   cursor: grab;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
-  transition: transform var(--solar-duration-fast) var(--solar-ease-out), box-shadow var(--solar-duration-fast) var(--solar-ease-out);
+  transition:
+    transform var(--solar-duration-fast) var(--solar-ease-out),
+    box-shadow var(--solar-duration-fast) var(--solar-ease-out);
 }
 
 .solar-range-input::-webkit-slider-thumb:hover {
@@ -472,8 +485,15 @@
 
 /* Animação Suave de Pulso */
 @keyframes solar-pulse-subtle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.75; transform: scale(0.96); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(0.96);
+  }
 }
 
 .solar-pulse {

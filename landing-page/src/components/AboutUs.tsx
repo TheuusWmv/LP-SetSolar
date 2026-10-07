@@ -1,6 +1,14 @@
+import { OptimizedImage } from "./OptimizedImage";
 import React, { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { ShieldCheck, Award, ArrowUpRight, Sun, TrendingDown, MapPin } from "lucide-react";
+import {
+  ShieldCheck,
+  Award,
+  ArrowUpRight,
+  Sun,
+  TrendingDown,
+  MapPin,
+} from "lucide-react";
 import { templateData } from "../data/templateData";
 import { BlurReveal, BlurRevealGroup, BlurRevealItem } from "./ui/blur-reveal";
 import { AnimatedCounter } from "./ui/animated-counter";
@@ -14,7 +22,7 @@ export const AboutUs: React.FC = () => {
   const isHighlightInView = useInView(highlightRef, { amount: 0.2 });
 
   const whatsappUrl = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
-    "Olá! Gostaria de conversar com a equipe técnica da Set Solar sobre o meu imóvel."
+    "Olá! Gostaria de conversar com a equipe técnica da Set Solar sobre o meu imóvel.",
   )}`;
 
   return (
@@ -51,11 +59,12 @@ export const AboutUs: React.FC = () => {
                     }
                     transition={{
                       duration: 0.05,
-                      delay: isHighlightInView && !shouldReduceMotion ? 0.38 : 0,
+                      delay:
+                        isHighlightInView && !shouldReduceMotion ? 0.38 : 0,
                     }}
-                    className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[var(--brand-accent)] text-white text-2xl sm:text-3xl lg:text-4xl font-black align-middle shadow-xs"
+                    className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[var(--brand-accent)] text-[var(--brand-accent-text)] text-2xl sm:text-3xl lg:text-4xl font-black align-middle shadow-xs"
                   >
-                    <Sun className="w-5 h-5 sm:w-6 sm:h-6 text-white inline" />
+                    <Sun className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--brand-accent-text)] inline" />
                     <span>clareza e segurança</span>
                   </motion.span>
 
@@ -71,13 +80,13 @@ export const AboutUs: React.FC = () => {
                       transition={
                         isHighlightInView
                           ? {
-                            duration: 0.65,
-                            delay: 0.18,
-                            ease: [0.23, 1, 0.32, 1],
-                          }
+                              duration: 0.65,
+                              delay: 0.18,
+                              ease: [0.23, 1, 0.32, 1],
+                            }
                           : {
-                            duration: 0.01,
-                          }
+                              duration: 0.01,
+                            }
                       }
                       className="absolute inset-0 bg-neutral-950 rounded-full z-20 pointer-events-none"
                       aria-hidden="true"
@@ -91,7 +100,10 @@ export const AboutUs: React.FC = () => {
 
           <BlurReveal delay={0.18} yOffset={20} blur="8px" className="max-w-md">
             <p className="text-base text-slate-600 leading-relaxed lg:pb-1 font-normal">
-              Fundada em Trindade - GO pelo engenheiro Davi Carvalho da Mata Barbosa, a Set Solar combina rigor técnico acadêmico em Engenharia Elétrica, atendimento humanizado e soluções que transformam a conta de luz dos goianos em investimento seguro e sustentável.
+              Fundada em Trindade - GO pelo engenheiro Davi Carvalho da Mata
+              Barbosa, a Set Solar combina rigor técnico acadêmico em Engenharia
+              Elétrica, atendimento humanizado e soluções que transformam a
+              conta de luz dos goianos em investimento seguro e sustentável.
             </p>
           </BlurReveal>
         </div>
@@ -101,8 +113,12 @@ export const AboutUs: React.FC = () => {
         {/* ========================================================================= */}
         <div className="mobile-bento md:hidden grid grid-cols-2 gap-3 mb-2">
           {/* Card 1: Foto Vertical Principal */}
-          <BlurReveal yOffset={20} blur="6px" className="relative rounded-[2rem] overflow-hidden col-span-2 min-h-[240px] border border-slate-200/80 shadow-md flex flex-col justify-end p-5">
-            <img
+          <BlurReveal
+            yOffset={20}
+            blur="6px"
+            className="relative rounded-[2rem] overflow-hidden col-span-2 min-h-[240px] border border-slate-200/80 shadow-md flex flex-col justify-end p-5"
+          >
+            <OptimizedImage
               src="/images/projetos/residencial-le-jardam.png"
               alt="Projeto Residencial Set Solar instalado com excelência em Goiás"
               className="absolute inset-0 w-full h-full object-cover"
@@ -124,8 +140,12 @@ export const AboutUs: React.FC = () => {
           </BlurReveal>
 
           {/* Card 2: Foto Horizontal dos Projetos Comerciais */}
-          <BlurReveal yOffset={20} blur="6px" className="relative rounded-[2rem] overflow-hidden col-span-2 order-3 min-h-[152px] border border-slate-200/80 shadow-md flex items-end justify-between p-5">
-            <img
+          <BlurReveal
+            yOffset={20}
+            blur="6px"
+            className="relative rounded-[2rem] overflow-hidden col-span-2 order-3 min-h-[152px] border border-slate-200/80 shadow-md flex items-end justify-between p-5"
+          >
+            <OptimizedImage
               src="/images/projetos/posto-mak.jpg"
               alt="Usinas solares comerciais instaladas em Trindade e região pela Set Solar"
               className="absolute inset-0 w-full h-full object-cover"
@@ -135,7 +155,9 @@ export const AboutUs: React.FC = () => {
 
             <div className="relative z-10 max-w-[70%]">
               <h3 className="text-lg font-bold text-white tracking-tight leading-tight">
-                Mais de 600 Projetos.<br />Trindade, Goiânia e Goiás.
+                Mais de 600 Projetos.
+                <br />
+                Trindade, Goiânia e Goiás.
               </h3>
             </div>
 
@@ -153,13 +175,21 @@ export const AboutUs: React.FC = () => {
           {/* Cards 3 & 4: 2 Colunas Lado a Lado (Stats Compactos) */}
           <div className="col-span-2 grid grid-cols-2 gap-3">
             {/* Card 3: Deep Navy & Amber 95% Card */}
-            <BlurReveal yOffset={16} blur="6px" className="min-h-[176px] min-w-0 rounded-[1.75rem] bg-gradient-to-br from-[#1B3A5C] to-[#0D1E30] p-4 flex flex-col justify-between border border-amber-500/40 shadow-sm text-white">
+            <BlurReveal
+              yOffset={16}
+              blur="6px"
+              className="min-h-[176px] min-w-0 rounded-[1.75rem] bg-gradient-to-br from-[#1B3A5C] to-[#0D1E30] p-4 flex flex-col justify-between border border-amber-500/40 shadow-sm text-white"
+            >
               <div className="flex items-center justify-between mb-2">
                 <TrendingDown className="w-5 h-5 text-[var(--brand-accent)]" />
-                <span className="text-xs font-extrabold uppercase tracking-wider text-amber-300">Economia</span>
+                <span className="text-xs font-extrabold uppercase tracking-wider text-amber-300">
+                  Economia
+                </span>
               </div>
               <div>
-                <span className="text-xs font-semibold text-white/90 block">Redução de até</span>
+                <span className="text-xs font-semibold text-white/90 block">
+                  Redução de até
+                </span>
                 <div className="text-4xl font-black text-white tracking-tighter leading-none my-1">
                   <AnimatedCounter value={95} suffix="%" duration={1.2} />
                 </div>
@@ -170,7 +200,11 @@ export const AboutUs: React.FC = () => {
             </BlurReveal>
 
             {/* Card 4: Dark Navy Authority Card */}
-            <BlurReveal yOffset={16} blur="6px" className="min-h-[176px] min-w-0 rounded-[1.75rem] bg-gradient-to-br from-[#1B3A5C] to-[#0D1E30] border border-amber-500/30 text-white shadow-sm p-4 flex flex-col justify-between">
+            <BlurReveal
+              yOffset={16}
+              blur="6px"
+              className="min-h-[176px] min-w-0 rounded-[1.75rem] bg-gradient-to-br from-[#1B3A5C] to-[#0D1E30] border border-amber-500/30 text-white shadow-sm p-4 flex flex-col justify-between"
+            >
               <div className="flex items-center justify-between mb-2">
                 <MapPin className="w-4 h-4 text-[var(--brand-accent)]" />
                 <span className="w-2 h-2 rounded-full bg-[var(--brand-accent)]" />
@@ -194,7 +228,8 @@ export const AboutUs: React.FC = () => {
         {/* DESKTOP BENTO GRID (5 cards estratégicos)                                */}
         {/* ========================================================================= */}
         <p className="md:hidden text-xs leading-relaxed text-slate-600 mt-4 mb-6">
-          Fundada pelo engenheiro Davi Carvalho (IF Goiano), a Set Solar cuida de todo o seu projeto em Trindade e Goiás.
+          Fundada pelo engenheiro Davi Carvalho (IF Goiano), a Set Solar cuida
+          de todo o seu projeto em Trindade e Goiás.
         </p>
 
         <BlurRevealGroup
@@ -207,7 +242,7 @@ export const AboutUs: React.FC = () => {
             yOffset={28}
             className="lg:col-span-7 relative min-h-[360px] sm:min-h-[440px] rounded-[2rem] overflow-hidden group shadow-lg shadow-neutral-900/5 border border-slate-200/80 flex flex-col justify-between p-6 sm:p-8"
           >
-            <img
+            <OptimizedImage
               src="/images/projetos/residencial-le-jardam.png"
               alt="Instalação residencial Set Solar no condomínio Le Jardam"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-240 ease-out-strong group-hover:scale-[1.03]"
@@ -232,7 +267,9 @@ export const AboutUs: React.FC = () => {
                 A economia real começa com um projeto bem dimensionado
               </h3>
               <p className="text-xs sm:text-sm text-slate-200/90 leading-relaxed">
-                Seu consumo elétrico, tipo de telhado e orientação solar guiam cada decisão técnica. É assim que garantimos a máxima geração e proteção da sua estrutura civil.
+                Seu consumo elétrico, tipo de telhado e orientação solar guiam
+                cada decisão técnica. É assim que garantimos a máxima geração e
+                proteção da sua estrutura civil.
               </p>
             </div>
           </BlurRevealItem>
@@ -256,12 +293,14 @@ export const AboutUs: React.FC = () => {
                 <AnimatedCounter value={95} suffix="%" duration={1.2} />
               </div>
               <p className="text-sm sm:text-base font-semibold text-white leading-snug">
-                de redução na fatura de luz desde o primeiro mês de funcionamento do sistema.
+                de redução na fatura de luz desde o primeiro mês de
+                funcionamento do sistema.
               </p>
             </div>
 
             <p className="text-xs text-slate-300 leading-relaxed border-t border-white/15 pt-4">
-              Uma conta menor abre espaço para os planos da sua família e amplia a rentabilidade da sua empresa ou propriedade rural em Goiás.
+              Uma conta menor abre espaço para os planos da sua família e amplia
+              a rentabilidade da sua empresa ou propriedade rural em Goiás.
             </p>
           </BlurRevealItem>
 
@@ -285,7 +324,8 @@ export const AboutUs: React.FC = () => {
                 Av. Manoel Monteiro, nº 1717
               </p>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Atendimento presencial no Centro / Setor Oeste de Trindade, com suporte ágil para a Região Metropolitana e interior de Goiás.
+                Atendimento presencial no Centro / Setor Oeste de Trindade, com
+                suporte ágil para a Região Metropolitana e interior de Goiás.
               </p>
             </div>
 
@@ -314,7 +354,9 @@ export const AboutUs: React.FC = () => {
                 Davi Carvalho
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Engenheiro eletricista pelo IF Goiano, à frente de cada estudo técnico com emissão oficial de ART e homologação rigorosa na Equatorial Goiás.
+                Engenheiro eletricista pelo IF Goiano, à frente de cada estudo
+                técnico com emissão oficial de ART e homologação rigorosa na
+                Equatorial Goiás.
               </p>
             </div>
 
@@ -343,7 +385,9 @@ export const AboutUs: React.FC = () => {
                 Equipamentos Tier 1
               </div>
               <p className="text-xs text-slate-200/90 leading-relaxed">
-                Trabalhamos com marcas mundiais como WEG, Deye e Canadian Solar, com garantia linear de 25 anos e suporte direto com a engenharia da Set Solar.
+                Trabalhamos com marcas mundiais como WEG, Deye e Canadian Solar,
+                com garantia linear de 25 anos e suporte direto com a engenharia
+                da Set Solar.
               </p>
             </div>
 

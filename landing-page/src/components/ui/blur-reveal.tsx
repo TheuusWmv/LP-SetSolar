@@ -29,7 +29,17 @@ export interface BlurRevealProps extends HTMLMotionProps<"div"> {
   once?: boolean;
   amount?: number | "some" | "all";
   margin?: string;
-  as?: "div" | "span" | "p" | "h1" | "h2" | "h3" | "h4" | "section" | "article";
+  as?:
+    | "div"
+    | "span"
+    | "p"
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "li"
+    | "section"
+    | "article";
 }
 
 export const BlurReveal: React.FC<BlurRevealProps> = ({
@@ -48,16 +58,13 @@ export const BlurReveal: React.FC<BlurRevealProps> = ({
   ...props
 }) => {
   const shouldReduceMotion = useReducedMotion();
-  const Component = (motion[as] || motion.div) as React.ComponentType<HTMLMotionProps<any>>;
+  const Component = (motion[as] || motion.div) as React.ComponentType<
+    HTMLMotionProps<any>
+  >;
 
   return (
     <Component
-      initial={{
-        opacity: 0,
-        y: shouldReduceMotion ? 0 : yOffset,
-        filter: shouldReduceMotion ? "none" : `blur(${blur})`,
-        scale: !shouldReduceMotion && scale !== 1 ? scale : undefined,
-      }}
+      initial={false}
       whileInView={{
         opacity: 1,
         y: 0,
@@ -108,7 +115,9 @@ export const BlurRevealGroup: React.FC<BlurRevealGroupProps> = ({
   as = "div",
   ...props
 }) => {
-  const Component = (motion[as] || motion.div) as React.ComponentType<HTMLMotionProps<any>>;
+  const Component = (motion[as] || motion.div) as React.ComponentType<
+    HTMLMotionProps<any>
+  >;
 
   const containerVariants: Variants = {
     hidden: {
@@ -126,7 +135,7 @@ export const BlurRevealGroup: React.FC<BlurRevealGroupProps> = ({
   return (
     <Component
       variants={containerVariants}
-      initial="hidden"
+      initial={false}
       whileInView="visible"
       viewport={{
         once,
@@ -163,7 +172,9 @@ export const BlurRevealItem: React.FC<BlurRevealItemProps> = ({
   ...props
 }) => {
   const shouldReduceMotion = useReducedMotion();
-  const Component = (motion[as] || motion.div) as React.ComponentType<HTMLMotionProps<any>>;
+  const Component = (motion[as] || motion.div) as React.ComponentType<
+    HTMLMotionProps<any>
+  >;
 
   const itemVariants: Variants = {
     hidden: {
@@ -225,7 +236,9 @@ export const BlurRevealWords: React.FC<BlurRevealWordsProps> = ({
   amount = 0.15,
 }) => {
   const shouldReduceMotion = useReducedMotion();
-  const Component = (motion[as] || motion.h2) as React.ComponentType<HTMLMotionProps<any>>;
+  const Component = (motion[as] || motion.h2) as React.ComponentType<
+    HTMLMotionProps<any>
+  >;
   const words = text.split(" ");
 
   const containerVariants: Variants = {
@@ -259,7 +272,7 @@ export const BlurRevealWords: React.FC<BlurRevealWordsProps> = ({
   return (
     <Component
       variants={containerVariants}
-      initial="hidden"
+      initial={false}
       whileInView="visible"
       viewport={{ once, amount }}
       className={cn("inline-block flex-wrap transform-gpu", className)}

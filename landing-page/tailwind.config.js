@@ -46,7 +46,7 @@ export default {
         'glow-solar': '0 0 30px -5px rgba(212, 148, 42, 0.40)',
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
       },
       transitionTimingFunction: {
         'out-strong': 'cubic-bezier(0.23, 1, 0.32, 1)',

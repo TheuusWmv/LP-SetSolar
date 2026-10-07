@@ -1,9 +1,10 @@
+import { OptimizedImage } from "./OptimizedImage";
 import React from "react";
 import { InfiniteSlider } from "./ui/infinite-slider";
 import { BlurReveal } from "./ui/blur-reveal";
 
-import froniusLogo from "../assets/logos/fronius.svg";
-import wegLogo from "../assets/logos/weg.svg";
+const froniusLogo = "/logos/fronius.svg";
+const wegLogo = "/logos/weg.svg";
 
 interface SolarBrandItem {
   id: string;
@@ -61,7 +62,8 @@ export const SolarLogoMarquee: React.FC = () => {
     {
       id: "equatorial",
       name: "Equatorial Goiás",
-      category: "Concessionária Homologada (Conexão e Injeção de Créditos ANEEL)",
+      category:
+        "Concessionária Homologada (Conexão e Injeção de Créditos ANEEL)",
       logoSrc: "/logos/equatorial-goias.svg",
       heightClass: "h-8 sm:h-9 md:h-10",
     },
@@ -75,7 +77,7 @@ export const SolarLogoMarquee: React.FC = () => {
         blur="8px"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-5 text-center"
       >
-        <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
+        <p className="text-xs font-bold uppercase tracking-widest text-slate-600">
           Tecnologia Tier 1 Mundial e Homologação Oficial na Equatorial Goiás
         </p>
       </BlurReveal>
@@ -86,7 +88,11 @@ export const SolarLogoMarquee: React.FC = () => {
         blur="10px"
         className="relative h-16 sm:h-20 w-full overflow-hidden flex items-center"
       >
-        <InfiniteSlider className="flex h-full w-full items-center" duration={36} gap={64}>
+        <InfiniteSlider
+          className="flex h-full w-full items-center"
+          duration={36}
+          gap={64}
+        >
           {baseBrands.map((brand, index) => (
             <div
               key={`${brand.id}-${index}`}
@@ -94,7 +100,7 @@ export const SolarLogoMarquee: React.FC = () => {
               title={`${brand.name} — ${brand.category}`}
             >
               <div className="flex shrink-0 items-center justify-center grayscale contrast-125 opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-200 ease-out-strong">
-                <img
+                <OptimizedImage
                   src={brand.logoSrc}
                   alt={brand.name}
                   className={`w-auto max-w-none shrink-0 object-contain ${brand.heightClass}`}

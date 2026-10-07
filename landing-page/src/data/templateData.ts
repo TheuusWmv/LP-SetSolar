@@ -80,13 +80,31 @@ export const templateData = {
   },
 
   partnerBrands: [
-    { name: "WEG Solar", category: "Engenharia e Tradição Nacional de Alta Confiabilidade" },
-    { name: "Deye", category: "Líder em Inversores Híbridos e String Inteligentes" },
-    { name: "Canadian Solar", category: "Painéis Fotovoltaicos Tier 1 de Alta Eficiência" },
+    {
+      name: "WEG Solar",
+      category: "Engenharia e Tradição Nacional de Alta Confiabilidade",
+    },
+    {
+      name: "Deye",
+      category: "Líder em Inversores Híbridos e String Inteligentes",
+    },
+    {
+      name: "Canadian Solar",
+      category: "Painéis Fotovoltaicos Tier 1 de Alta Eficiência",
+    },
     { name: "Jinko Solar", category: "Tecnologia N-Type TOPCon Líder Global" },
-    { name: "Growatt", category: "Inversores Digitais com Monitoramento por App" },
-    { name: "Fronius", category: "Inversores Premium Austríacos de Alta Performance" },
-    { name: "Equatorial Goiás", category: "Concessionária Homologada (Conexão e Injeção de Créditos)" },
+    {
+      name: "Growatt",
+      category: "Inversores Digitais com Monitoramento por App",
+    },
+    {
+      name: "Fronius",
+      category: "Inversores Premium Austríacos de Alta Performance",
+    },
+    {
+      name: "Equatorial Goiás",
+      category: "Concessionária Homologada (Conexão e Injeção de Créditos)",
+    },
   ],
 
   howItWorks: {
@@ -319,9 +337,10 @@ export const templateData = {
 
   faqs: [
     {
-      question: "Quanto realmente posso economizar na fatura de luz com a Set Solar?",
+      question:
+        "Quanto realmente posso economizar na fatura de luz com a Set Solar?",
       answer:
-        "Com o sistema fotovoltaico on-grid instalado pela Set Solar, você pode reduzir em até 95% o valor da sua conta de energia. Você continuará pagando à concessionária (Equatorial Goiás) apenas a taxa mínima de disponibilidade da rede elétrica (custo de disponibilidade) e a taxa municipal de iluminação pública.",
+        "A economia depende do consumo, da geração estimada, da tarifa e das regras de compensação aplicáveis ao seu projeto. A simulação da Set Solar apresenta essas premissas. A fatura não é necessariamente zerada: podem permanecer o custo de disponibilidade, a iluminação pública e cobranças previstas na regulamentação. Peça a análise da sua conta de energia.",
       category: "Economia",
     },
     {
@@ -331,13 +350,15 @@ export const templateData = {
       category: "Financiamento",
     },
     {
-      question: "O sistema continua gerando energia em dias nublados ou com chuva?",
+      question:
+        "O sistema continua gerando energia em dias nublados ou com chuva?",
       answer:
         "Sim! Os painéis fotovoltaicos operam através da radiação luminosa e não apenas do calor ou da luz solar direta. Mesmo em dias chuvosos ou com céu encoberto, o sistema continua gerando eletricidade em níveis proporcionais. O dimensionamento da Set Solar considera todo o histórico meteorológico anual de Goiás.",
       category: "Técnico",
     },
     {
-      question: "A Set Solar cuida de toda a aprovação e homologação na Equatorial Goiás?",
+      question:
+        "A Set Solar cuida de toda a aprovação e homologação na Equatorial Goiás?",
       answer:
         "Sim, assumimos 100% da responsabilidade burocrática e técnica no modelo Turn-key. Realizamos o projeto elétrico com ART assinada por engenheiro, protocolamos a documentação perante a Equatorial Goiás, acompanhamos o parecer de acesso e orientamos a vistoria até a troca do medidor pelo relógio bidirecional.",
       category: "Regulatório",

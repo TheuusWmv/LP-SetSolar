@@ -4,59 +4,122 @@
 @import "tailwindcss/utilities";
 
 :focus-visible {
-  outline: 3px solid var(--brand-accent, #D4942A);
+  outline: 3px solid var(--brand-accent, #d4942a);
   outline-offset: 4px;
 }
 
-.services-track { scrollbar-width: none; }
-.services-track::-webkit-scrollbar { display: none; }
+.services-track {
+  scrollbar-width: none;
+}
+.services-track::-webkit-scrollbar {
+  display: none;
+}
 /* Leave enough trailing space for the final card to snap to the same origin. */
-.services-track::after { content: ""; flex: 0 0 calc(14% - 12px); }
+.services-track::after {
+  content: "";
+  flex: 0 0 calc(14% - 12px);
+}
 
 @media (max-width: 767px) {
   /* Intrinsic content height protects the hero on short screens and with large text.
      The extra scroll distance still lets the sticky frame complete its animation. */
-  .solar-hero { height: calc(var(--hero-height, 100dvh) + 35vh); }
-  .solar-hero-viewport { height: var(--hero-height, 100dvh); overflow: visible; }
-  .solar-hero-frame, .solar-hero-canvas { height: 100%; min-height: 0; }
-  .solar-hero-canvas > .relative.z-10 { min-height: 0; padding-top: 112px; padding-bottom: 32px; }
-  .hero-notch { width: min(84%, 360px, calc(100% - 64px)); }
-  .solar-hero-canvas a { min-height: 44px; }
-  .solar-hero-canvas .pointer-events-auto > .bg-white { padding-inline: 12px; }
-  .solar-hero-canvas a[aria-label="Set Solar - Início"] { gap: 8px; }
-  .solar-hero-canvas a[aria-label="Set Solar - Início"] > div { width: 24px; height: 24px; flex-shrink: 0; }
-  .solar-hero-canvas button[aria-controls="hero-mobile-menu"] { min-width: 44px; min-height: 44px; width: 44px; height: 44px; flex-shrink: 0; }
-  .solar-hero-canvas button[aria-controls="hero-mobile-menu"] svg { width: 20px; height: 20px; }
-  .mobile-bento > * { min-width: 0; }
-  .mobile-footer a, .mobile-footer summary { min-height: 44px; padding-block: 12px; }
-  .mobile-footer a { display: flex; align-items: center; font-size: 14px; overflow-wrap: anywhere; }
-  .footer-legal a, .footer-legal button { min-height: 44px; display: inline-flex; align-items: center; }
+  .solar-hero {
+    height: calc(var(--hero-height, 100dvh) + 35vh);
+  }
+  .solar-hero-viewport {
+    height: var(--hero-height, 100dvh);
+    overflow: visible;
+  }
+  .solar-hero-frame,
+  .solar-hero-canvas {
+    height: 100%;
+    min-height: 0;
+  }
+  .solar-hero-canvas > .relative.z-10 {
+    min-height: 0;
+    padding-top: 112px;
+    padding-bottom: 32px;
+  }
+  .hero-notch {
+    width: min(84%, 360px, calc(100% - 64px));
+  }
+  .solar-hero-canvas a {
+    min-height: 44px;
+  }
+  .solar-hero-canvas .pointer-events-auto > .bg-white {
+    padding-inline: 12px;
+  }
+  .solar-hero-canvas a[aria-label="Set Solar - Início"] {
+    gap: 8px;
+  }
+  .solar-hero-canvas a[aria-label="Set Solar - Início"] > div {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .solar-hero-canvas button[aria-controls="hero-mobile-menu"] {
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .solar-hero-canvas button[aria-controls="hero-mobile-menu"] svg {
+    width: 20px;
+    height: 20px;
+  }
+  .mobile-bento > * {
+    min-width: 0;
+  }
+  .mobile-footer a,
+  .mobile-footer summary {
+    min-height: 44px;
+    padding-block: 12px;
+  }
+  .mobile-footer a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+  .footer-legal a,
+  .footer-legal button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 /* Pre-rendered content remains readable when JavaScript is unavailable. */
-html:not(.js-ready) #root [style*="opacity"] {
+html:not(.js-ready) [data-island] [style*="opacity"] {
   opacity: 1 !important;
 }
-html:not(.js-ready) #root [style*="filter"] {
+html:not(.js-ready) [data-island] [style*="filter"] {
   filter: none !important;
 }
 
-.faq-summary::-webkit-details-marker { display: none; }
-.faq-summary { list-style: none; }
-.faq-item[open] .faq-toggle { transform: rotate(45deg); }
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+.faq-summary {
+  list-style: none;
+}
+.faq-item[open] .faq-toggle {
+  transform: rotate(45deg);
+}
 .faq-item[open] .faq-icon {
-  background-color: var(--brand-accent, #D4942A);
-  border-color: var(--brand-accent, #D4942A);
-  color: #ffffff;
+  background-color: var(--brand-accent, #d4942a);
+  border-color: var(--brand-accent, #d4942a);
+  color: var(--brand-accent-text);
 }
 .faq-item[open] .faq-summary:hover .faq-icon {
-  background-color: var(--brand-accent-hover, #B47218);
-  border-color: var(--brand-accent-hover, #B47218);
+  background-color: var(--brand-accent-hover, #b47218);
+  border-color: var(--brand-accent-hover, #b47218);
 }
 
 @layer base {
   :root {
-    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
     --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
     --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
     --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
@@ -82,7 +145,7 @@ html:not(.js-ready) #root [style*="filter"] {
   }
 
   ::selection {
-    background-color: var(--brand-accent, #D4942A);
+    background-color: var(--brand-accent, #d4942a);
     color: #ffffff;
   }
 }
@@ -124,8 +187,15 @@ html:not(.js-ready) #root [style*="filter"] {
 
 /* Animations */
 @keyframes pulse-subtle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.75; transform: scale(0.96); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(0.96);
+  }
 }
 
 .animate-pulse-subtle {
@@ -133,13 +203,21 @@ html:not(.js-ready) #root [style*="filter"] {
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0%); }
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .animate-marquee {
@@ -191,3 +269,47 @@ html:not(.js-ready) #root [style*="filter"] {
   }
 }
 
+.logo-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration) linear infinite;
+}
+.logo-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: var(--marquee-gap);
+  padding-right: var(--marquee-gap);
+}
+.logo-marquee:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee {
+    animation: none;
+  }
+}
+
+/* Inactive testimonial panels must stay hidden with and without JavaScript. */
+#testimonials [aria-hidden="true"] {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.menu-close {
+  display: none;
+}
+[aria-expanded="true"] > .menu-open {
+  display: none;
+}
+[aria-expanded="true"] > .menu-close {
+  display: block;
+}
+#hero-mobile-menu[hidden] {
+  display: none;
+}
+
+/* Keep the largest text independent of web-font downloads. */
+.solar-hero { font-family: Arial, 'Segoe UI', sans-serif; }
+
+/* Let the browser skip rendering interactive regions outside the viewport. */
+[data-island], #faq, #guia-energia-solar, #contact { content-visibility: auto; contain-intrinsic-size: auto 900px; }

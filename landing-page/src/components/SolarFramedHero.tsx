@@ -2,7 +2,6 @@ import { OptimizedImage } from "./OptimizedImage";
 import React from "react";
 import { ArrowUpRight, CheckCircle2, ShieldCheck, Menu, X } from "lucide-react";
 import { templateData } from "../data/templateData";
-import { BlurReveal } from "./ui/blur-reveal";
 
 export const SolarFramedHero: React.FC = () => {
   const { company } = templateData;
@@ -232,12 +231,7 @@ export const SolarFramedHero: React.FC = () => {
                 className="max-w-2xl lg:max-w-3xl text-left"
               >
                 {/* Pill Eyebrow Tag */}
-                <BlurReveal
-                  className="hidden md:block"
-                  delay={0.08}
-                  yOffset={14}
-                  blur="6px"
-                >
+                <div className="hidden md:block">
                   <div className="inline-flex items-center gap-2 px-3 md:px-3.5 py-1 md:py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[11px] md:text-xs font-medium tracking-wide mb-3 md:mb-5 shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-accent)] animate-pulse-subtle" />
                     <span className="md:hidden">Set Solar</span>
@@ -250,10 +244,10 @@ export const SolarFramedHero: React.FC = () => {
                       Até 95% de Economia
                     </span>
                   </div>
-                </BlurReveal>
+                </div>
 
                 {/* Headline: Editorial Responsive Layout */}
-                <BlurReveal delay={0.16} yOffset={22} blur="8px" as="h1">
+                <h1 className="block">
                   <span className="text-[2.15rem] leading-[1.08] md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-tight mb-3 md:mb-5 block">
                     <span className="md:hidden font-extrabold">
                       Economize até 95% na sua conta de luz em{" "}
@@ -277,10 +271,10 @@ export const SolarFramedHero: React.FC = () => {
                       </span>
                     </span>
                   </span>
-                </BlurReveal>
+                </h1>
 
                 {/* Subtitle / Description: Responsive length */}
-                <BlurReveal delay={0.24} yOffset={20} blur="8px">
+                <div>
                   <p className="text-sm md:text-base lg:text-lg text-slate-200/90 font-normal leading-relaxed mb-6 md:mb-8 max-w-xl text-pretty">
                     <span className="md:hidden">
                       Projetos de alta performance para residências, empresas e
@@ -295,10 +289,10 @@ export const SolarFramedHero: React.FC = () => {
                       parcelamento em até 60x sem entrada.
                     </span>
                   </p>
-                </BlurReveal>
+                </div>
 
                 {/* Dual Pill Buttons */}
-                <BlurReveal delay={0.32} yOffset={18} blur="6px">
+                <div>
                   <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-4 mb-0 md:mb-8">
                     <a
                       href={company.simulatorUrl || whatsappUrl}
@@ -325,51 +319,29 @@ export const SolarFramedHero: React.FC = () => {
                       </span>
                     </a>
                   </div>
-                </BlurReveal>
+                </div>
 
                 {/* Trust Features Bar & Mobile Scroll Indicator */}
-                <BlurReveal
-                  className="hidden md:block"
-                  delay={0.38}
-                  yOffset={14}
-                  blur="6px"
-                >
-                  <div className="pt-1">
-                    {/* Mobile bottom indicator */}
-                    <div className="md:hidden flex items-center justify-between text-xs text-white/70 font-medium">
-                      <span className="text-[11px] tracking-tight">
-                        +600 Projetos • Equatorial Homologada • 25 Anos Garantia
-                      </span>
-                      <a
-                        href="#about"
-                        className="w-7 h-7 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm flex items-center justify-center text-white/90"
-                        aria-label="Rolar para a seção sobre nós"
-                      >
-                        <span className="text-xs">↓</span>
-                      </a>
-                    </div>
-
-                    {/* Desktop trust badges */}
-                    <div className="hidden md:flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/70 font-medium">
-                      <span className="flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
-                        +600 Projetos Instalados
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
-                        Equatorial Goiás Homologada
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <ShieldCheck className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
-                        Parcelamento em até 60x
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <ShieldCheck className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
-                        25 Anos de Garantia
-                      </span>
-                    </div>
+                <div className="hidden md:block pt-1">
+                  <div className="hidden md:flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/70 font-medium">
+                    <span className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
+                      +600 Projetos Instalados
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
+                      Equatorial Goiás Homologada
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
+                      Parcelamento em até 60x
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5 text-[var(--brand-accent)]" />
+                      25 Anos de Garantia
+                    </span>
                   </div>
-                </BlurReveal>
+                </div>
               </div>
             </div>
 

@@ -74,8 +74,6 @@ document.documentElement.classList.add("js-ready");
 queueHero();
 
 const loaders = {
-  Hero: () =>
-    import("./components/SolarFramedHero").then((m) => m.SolarFramedHero),
   AboutUs: () => import("./components/AboutUs").then((m) => m.AboutUs),
   HowItWorks: () => import("./components/HowItWorks").then((m) => m.HowItWorks),
   Services: () => import("./components/Services").then((m) => m.Services),
@@ -91,6 +89,7 @@ const observer = new IntersectionObserver(
       if (!entry.isIntersecting) continue;
       const region = entry.target as HTMLElement;
       const name = region.dataset.island as keyof typeof loaders;
+      if (!loaders[name]) continue;
       observer.unobserve(region);
       Promise.all([
         loaders[name](),
@@ -106,7 +105,7 @@ const observer = new IntersectionObserver(
         );
     }
   },
-  { rootMargin: "600px" },
+  { rootMargin: "250px" },
 );
 for (const region of document.querySelectorAll<HTMLElement>("[data-island]"))
   observer.observe(region);

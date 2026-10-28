@@ -20,10 +20,8 @@ export const App: React.FC = () => {
       </a>
 
       <main>
-        {/* 1. Hero Section (Framed with Notch Navbar) */}
-        <div data-island="Hero">
-          <SolarFramedHero />
-        </div>
+        {/* 1. Hero Section (Framed with Notch Navbar) - pure static first view */}
+        <SolarFramedHero />
 
         {/* 2. Marquee das Marcas (Tier-1 Solar Brands) */}
         <SolarLogoMarquee />
